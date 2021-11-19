@@ -1,5 +1,7 @@
 /*********************************************************************************
 
+	Adjusted by M3 211118_1906
+
 	Template Name: Trydo React Degital Agency Template
 	Note: This is style css.
 
@@ -20,12 +22,10 @@
 	|	|___ animations
 	|	|___ shortcode
 	|	|___ spacing
-	|
-	|
-	|___Header Styles
 	|	|___ header
 	|	|___ mainmenu
-	|
+	|	|___ blog 
+	|	|___ blog-details 
 	|
 	|___Inner Styles
 	|	|___ breadcrump 
@@ -49,9 +49,7 @@
 	|	|___ list 
 	|	|___ contact 
 	|
-	|___BLog Styles
-	|	|___ blog 
-	|	|___ blog-details 
+
 	|
 	|___Template Styles
 	|	|___ about 
@@ -76,27 +74,16 @@
 @import 'default/animations';
 @import 'default/shortcode';
 @import 'default/spacing';
-
-
-
-/**************************************
-    Header Styles
-***************************************/
-
-@import 'header/header';
-@import 'header/mainmenu';
-
-
-/**************************************
-    Inner Styles
-***************************************/
-
-@import 'common/breadcrump';
-@import 'common/section-title';
-@import 'common/button';
-@import 'common/pagination';
-@import 'common/socialicon';
-@import 'common/footer';
+@import 'default/header';
+@import 'default/mainmenu';
+@import 'default/blog';
+@import 'default/blog-details';
+@import 'default/breadcrump';
+@import 'default/section-title';
+@import 'default/button';
+@import 'default/pagination';
+@import 'default/socialicon';
+@import 'default/footer';
 
 
 
@@ -124,15 +111,6 @@
 
 
 /**************************************
-    Blog Styles
-***************************************/
-
-@import 'blog/blog';
-@import 'blog/blog-details';
-
-
-
-/**************************************
     Template Styles
 ***************************************/
 
@@ -141,3 +119,9 @@
 @import 'template/service-details';
 @import 'template/dark-version';
 @import 'template/preview';
+
+/**************************************
+    Musicasa Styles - M3
+***************************************/
+
+@import '_musicasa-global.scss';

@@ -59,6 +59,9 @@ import PricingTable from "./blocks/PricingTable";
 import { BrowserRouter, Switch, Route  } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
+
+// Musicasa Pages
+import HostProfile from './Pages/HostProfile/MCAHostProfile';
 class Root extends Component{
     render(){
         return(
@@ -110,6 +113,8 @@ class Root extends Component{
                         <Route exact path={`${process.env.PUBLIC_URL}/columns`} component={Columns}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/pricing-table`} component={PricingTable}/>
 
+
+                        <Route exact path={`${process.env.PUBLIC_URL}/host-profile`} component={HostProfile}/>
 
                         
                         <Route path={`${process.env.PUBLIC_URL}/404`} component={error404}/>
