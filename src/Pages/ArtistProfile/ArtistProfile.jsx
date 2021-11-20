@@ -3,20 +3,22 @@ import {Link} from "react-router-dom";
 import { Parallax } from "react-parallax";
 import Scrollspy from 'react-scrollspy';
 import ScrollToTop from 'react-scroll-up';
+import Slider from "react-slick";
 import { FiChevronUp , FiX , FiMenu } from "react-icons/fi";
 import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn} from "react-icons/fa";
 
 
-import BlogList from "../../Components/McaBlogList";
-import FooterTwo from "../../Components/McaFooterTwo";
+import MusicasaHeader from "../../Components/McaHeader";
 import Helmet from "../../Components/McaHelmet";
 import ArtistVideo from "../../Components/McaArtistVideo";
+import BlogList from "../../Components/McaBlogList";
+import FooterTwo from "../../Components/McaFooterTwo";
 
-
+import HostCoverPic from "../../Components/McaHostCoverPic";
 import BlogContent from "../../Components/McaBlogContent";
+import ArtistSlider from "../../Components/ArtistSlider";
 
 
-import Slider from "react-slick";
 
 const SocialShare = [
     {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
@@ -38,8 +40,7 @@ const SlideList = [
 
 
 
-
-class HostProfile extends Component{
+class ArtistProfile extends Component{
     constructor(props) {
         super(props);
         this.menuTrigger = this.menuTrigger.bind(this);
@@ -82,79 +83,32 @@ class HostProfile extends Component{
         
         return(
             <Fragment>
-                <Helmet pageTitle="HostProfile" />
-                {/* Start Header Area  */}
-                <header className="header-area formobile-menu header--fixed default-color">
-                    <div className="header-wrapper" id="header-wrapper">
-                        <div className="header-left">
-                            <div className="logo">
-                                <a href="/">
-                                    <img className="logo-1" src="/assets/images/logo/logo-light.png" alt="Logo Images"/>
-                                    <img className="logo-2" src="/assets/images/logo/logo-all-dark.png" alt="Logo Images"/>
-                                </a>
-                            </div>
-                        </div>
-                        <div className="header-right">
-                            <nav className="mainmenunav d-lg-block">
-                                <Scrollspy className="mainmenu" items={['home','service', 'about', 'portfolio','team','testimonial','blog', 'contact']} currentClassName="is-current" offset={-200}>
-                                    <li><a href="#home">Home</a></li>
-                                    <li><a href="#service">Concerts</a></li>
-                                    <li><a href="#about">My Profile</a></li>
-                                    <li><Link to="/business" >Demos</Link></li>
-                                </Scrollspy>
-                            </nav>
-                            {/* Start Humberger Menu  */}
-                            <div className="humberger-menu d-block d-lg-none pl--20">
-                                <span onClick={this.menuTrigger} className="menutrigger text-white"><FiMenu /></span>
-                            </div>
-                            {/* End Humberger Menu  */}
-                            <div className="close-menu d-block d-lg-none">
-                                <span onClick={this.CLoseMenuTrigger} className="closeTrigger"><FiX /></span>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                {/* End Header Area  */}
+                <Helmet pageTitle="ArtistProfile" />
 
 
-
+                
+                {/* Start HeaderThree Area  */}
+                <MusicasaHeader />
+                {/* End HeaderThree Area  */}
 
                 {/* Start Page Wrapper  */}
                 <main className="page-wrapper">
 
 
-                    {/* Start Slider Area   */}
-                    <div className="slider-activation slider-creative-agency" id="home">
-                        <div className="bg_image bg_image--26" data-black-overlay="6">
-                            {SlideList.map((value , index) => (
-                                <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center" key={index}>
-                                    <div className="container">
-                                        <div className="row">
-                                            <div className="col-lg-12">
-                                                <div className={`inner ${value.textPosition}`}>
-                                                    {value.category ? <span>{value.category}</span> : ''}
-                                                    {value.title ? <h1 className="title theme-gradient">{value.title}</h1> : ''}
-                                                    {value.buttonText ? <div className="slide-btn"><a className="rn-button-style--2 btn-primary-color" href={`${value.buttonLink}`}>{value.buttonText}</a></div> : ''}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    {/* End Slider Area   */}
+                    {/* Start Host Cover Pic (based on Breadcrumb)  */}
+                    <HostCoverPic />
+                    {/* End Host Cover Pic (based on Breadcrumb)  */}
 
-                    {/* Start Portfolio Details */}
+                    {/* Start Bio Header (based on Portfolio Details) */}
                     <div className="rn-portfolio-details ptb--120 bg_color--1">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="portfolio-details">
                                         <div className="inner">
-                                            <h2>Host's Name</h2>
-                                            <p className="subtitle">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commod viverra maecenas accumsan lacus vel facilisis. ut labore et dolore magna aliqua. </p>
+                                            <h2>Nicky Stefan</h2>
+                                            <p className="subtitle">Erik and Isabella’s home offers the perfect setting for a perfect music night, under a string of lights and orange and purple skies.</p>
+ 
 
                                             <div className="portfolio-view-list d-flex flex-wrap">
                                                 <div className="port-view">
@@ -187,7 +141,7 @@ class HostProfile extends Component{
                             </div>
                         </div>
                     </div>
-                    {/* End Portfolio Details */}
+                    {/* End Bio Header (based on Portfolio Details) */}
 
                     {/* Start About Area */}
                     <div className="about-area ptb--120 bg_color--5" id="about">
@@ -198,14 +152,14 @@ class HostProfile extends Component{
                                         <div className="about-inner inner">
                                             <div className="section-title">
                                                 <h2 className="title">About the Artist</h2>
-                                                <p className="description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered <a href="#alteration">alteration</a> in some form, by injected humour, or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
+                                                <p className="description">Nicky Stefan, an Ecuadorian urban pop singer whose current country of residence is the USA and has lived and graduated as a singing teacher and professional singer in Moscow, Russia. Nicky Stefan participated in several international competitions, such as La Voz Russia, New Wave Lithuania, and La Voz Ecuador. </p>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="col-lg-8">
-                                        <div className="">
-                                            <img className="w-100" src="/assets/images/about/about-3.jpg" alt="About Images"/>
-                                        </div>
+                                {/* Start SliderTwo, from slider component  */}
+                                <ArtistSlider />
+                                {/* End  SliderTwo, from slider component  */}
                                     </div>
                                 </div>
                             </div>
@@ -217,29 +171,25 @@ class HostProfile extends Component{
                     <ArtistVideo />
                     {/* End VideoPopup Area */}
 
-                    {/* Start Blog Area (inside Parallax) from Startup */}
+                    {/* Start Concert Cards inside Parallax (based on Blog Area in Startup) */}
                     <Parallax className="rn-blog-area rn-testimonial-light" strength={700} data-black-overlay="7">
                         <div className="blog-area ptb--120" data-black-overlay="6">
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="section-title service-style--2 text-center mb--30 mb_sm--0">
-                                            <h2>Latest News</h2>
-                                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+                                            <h2>Concerts</h2>
                                         </div>
                                     </div>
                                 </div>
-
-
-                 {/* Start BlogList.jsx  */}
-                 <BlogList />
-                {/* End BlogList.jsx  */}
-
+                                {/* Start BlogList.jsx  */}
+                                <BlogList />
+                                {/* End BlogList.jsx  */}
                             </div> 
                         </div>
                         
                     </Parallax>
-                    {/* End  Blog Area (inside Parallax) from Startup */}
+                    {/* End Concert Cards inside Parallax (based on Blog Area in Startup) */}
 
 
 
@@ -265,4 +215,4 @@ class HostProfile extends Component{
     }
 }
 
-export default HostProfile;
+export default ArtistProfile;

@@ -34,7 +34,7 @@ class BLogList extends Component{
                             <div className="blog blog-style--1">
                                 <div className="thumbnail">
                                     <a href="/blog-details">
-                                        <img className="w-100" src={`/images/event-cards/square/artist-${value.images}.jpg`} alt="Blog Images"/>
+                                        <img className="w-100" src={`assets/images-mca/event-cards/artist-${value.images}.jpg`} alt="Blog Images"/>
                                     </a>
                                 </div>
                                 <div className="content">

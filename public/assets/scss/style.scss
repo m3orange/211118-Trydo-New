@@ -49,8 +49,6 @@
 	|	|___ list 
 	|	|___ contact 
 	|
-
-	|
 	|___Template Styles
 	|	|___ about 
 	|	|___ portfolio-details
@@ -121,7 +119,20 @@
 @import 'template/preview';
 
 /**************************************
-    Musicasa Styles - M3
+    Musicasa Styles - Created by M3
 ***************************************/
 
+@import '_musicasa-recipes';
+@import '_musicasa-variables';
+
 @import '_musicasa-global.scss';
+
+@import '_musicasa-footer.scss';
+
+
+@import '_host-profile.scss';
+@import '_artist-profile.scss';
+
+
+
+@import '_musicasa-overrides';

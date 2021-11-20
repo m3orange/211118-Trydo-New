@@ -17,9 +17,9 @@ const FooterTwo = () => {
                 <div className="row align-items-center justify-content-between">
                     <div className="col-lg-4 col-md-6 col-sm-6 col-12">
                         <div className="inner">
-                            <div className="logo text-center text-sm-left mb_sm--20">
-                                <a href="/home-one">
-                                    <img src="/assets/images/logo/logo.png" alt="Logo images"/>
+                            <div className="logo text-center text-sm-left mb_sm--20 footer-mca-logo">
+                                <a href="/login">
+                                    <img src="/assets/images-mca/logo/logo-white-2x.png" alt="Logo images"/>
                                 </a>
                                 <div className="footer-miami-love">Made with 💛 in Miami.</div>
                             </div>

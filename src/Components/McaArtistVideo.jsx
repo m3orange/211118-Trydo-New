@@ -29,7 +29,7 @@ class ArtistVideo extends Component {
                                 <div className="col-lg-12">
                                     <div className="thumb position-relative">
                                         <img className="w-100" src="/assets/images/blog/bl-big-01.jpg" alt="Service Images"/>
-                                        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='ZOoVOfieAF8' onClose={() => this.setState({isOpen: false})} />
+                                        <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='BD7_AW9H97M' onClose={() => this.setState({isOpen: false})} />
                                         <button className="video-popup position-top-center" onClick={this.openModal}><span className="play-icon"></span></button>
                                     </div>
                                 </div>
