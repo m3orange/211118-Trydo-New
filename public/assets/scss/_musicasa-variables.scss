@@ -1,36 +1,56 @@
+/*========================================
+    Adding all Musicasa fonts and colors
+==========================================*/
+
+
+
 //===== Colors =====//
-$theme-color: #f9004d;
-$theme-color-2: #f61b10;
-$theme-color-3: #ef0963;
+$theme-color: #DA59A0;   /* Magenta */
+$theme-color-2: #FDBB30; /* Yellow */
+$theme-color-3: #F1696A; /* Peach */
+$theme-color-4: rgb(62, 197, 231) ;
 $body-color: #1d1d24;
-$heading-color: #1f1f25;
+/*$heading-color: #1f1f25;*/
+$heading-color: #DA59A0; /* M3 Previously that pesky #1f1f25 affecting the links in the sticky navbar. */
 $border-color: #d4d4d4;
-$white:#fff;
+$white:#FFFFFF;
+
+/* 
+Magenta
+rgba(218,89,160,1.0)
+
+Yellow
+rgba(253,187,48,1.0)
+
+Peach
+rgba(241,105,106,1.0)
+
+*/
 
 
 /*===============================
     Font Family 
 =================================*/
-$body-font: 'Poppins', sans-serif;
-$heading-font: 'Poppins', sans-serif;
+$body-font: 'Causten_Regular', Helvetica, Arial, sans-serif; /* M3 */
+$heading-font: 'Austral_Slab_-_Stamp_Regular', 'HK Grotesk Regular', Helvetica, Arial, sans-serif; /* M3 */
 
+$button-font: 'Causten_Medium', Helvetica, Arial, sans-serif; /* M3 */
 
 // Heading Font List
-$font-1: 'Poppins', sans-serif;
+$font-1: 'Austral_Slab_-_Stamp_Thin', sans-serif; /* M3 */
 
 $fontList: $font-1;
+
 
 
 /*===============================
     Color Variation 
 =================================*/
 $color-1:  $theme-color;
-$color-2:  #f4769a;
-$color-3:  #2f21b3;
-$color-4:  #8956e2;
+$color-2:  #FDBB30; /* Yellow */
+$color-3:  #F1696A; /* Peach */
+$color-4:  #8956e2; /* Unknown */
 $colorList: $color-1, $color-2 ,$color-3 ,$color-4;
-
-
 
 
 

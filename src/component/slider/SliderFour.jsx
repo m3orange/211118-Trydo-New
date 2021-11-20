@@ -17,7 +17,7 @@ class SliderFour extends Component {
         <div className="slider-activation">
             {/* Start Single Slide */}
                 {SlideList.map((value , index) => (
-                    <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center bg_image bg_image--1" key={index} data-black-overlay="6">
+                    <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center bg_image mca-bg-image-header-01" key={index} data-black-overlay="1">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">

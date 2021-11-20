@@ -67,7 +67,9 @@
 @import 'default/variables';
 @import 'default/mixins';
 @import 'default/reset';
+/*
 @import 'default/typography';
+*/
 @import 'default/extend';
 @import 'default/animations';
 @import 'default/shortcode';
@@ -120,19 +122,24 @@
 
 /**************************************
     Musicasa Styles - Created by M3
+
+
+	@import '_musicasa-global-disabled.scss';
+	
+
+
 ***************************************/
 
-@import '_musicasa-recipes';
+
+@import '_artist-profile.scss';
+@import '_host-profile.scss';
 @import '_musicasa-variables';
+@import '_musicasa-typography';
 
 @import '_musicasa-global.scss';
+@import '_musicasa-recipes';
+
+
 
 @import '_musicasa-footer.scss';
-
-
-@import '_host-profile.scss';
-@import '_artist-profile.scss';
-
-
-
 @import '_musicasa-overrides';

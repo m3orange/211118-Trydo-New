@@ -64,7 +64,7 @@ import * as serviceWorker from './serviceWorker';
 import Login from './Pages/Login/Login';
 import HostProfile from './Pages/HostProfile/HostProfile';
 import ArtistProfile from './Pages/ArtistProfile/ArtistProfile';
-import SamplePage from './Pages/ArtistProfile/SamplePage';
+import MCATemplatePage from './Pages/ArtistProfile/MCATemplatePage';
 
 
 class Root extends Component{
@@ -123,7 +123,7 @@ class Root extends Component{
                         <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/host-profile`} component={HostProfile}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/artist-profile`} component={ArtistProfile}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/sample-page`} component={SamplePage}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/template-page`} component={MCATemplatePage}/>
                         
                         <Route path={`${process.env.PUBLIC_URL}/404`} component={error404}/>
                         <Route component={error404}/>

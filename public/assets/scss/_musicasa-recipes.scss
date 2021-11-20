@@ -17,7 +17,7 @@
 
 @for $i from 01 through 99 {
     .mca-bg-image-0#{$i} {
-        background-image: url(/assets/images/bg/mca-bg-image-0#{$i}.jpg) !important;
+        background-image: url(/assets/images-mca/bg/mca-bg-image-0#{$i}.jpg) !important;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
@@ -26,12 +26,20 @@
 
 @for $i from 01 through 99 {
     .mca-bg-image-header-0#{$i} {
-        background-image: url(/assets/images/bg/mca-bg-image-header-0#{$i}.png) !important;
+        background-image: url(/assets/images-mca/bg/mca-bg-image-header-0#{$i}.png) !important;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
     }
 }
+
+@for $i from 01 through 99 {
+    .mca-bg-image-parallax-0#{$i} {
+        background-image: url(/assets/images-mca/bg/mca-bg-image-parallax-0#{$i}.jpg) !important;
+
+    }
+}
+
 
 
 
