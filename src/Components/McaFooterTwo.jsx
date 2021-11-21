@@ -10,7 +10,7 @@ const SocialShare = [
     {Social: <FaSpotify /> , link: 'https://open.spotify.com/playlist/7lDn8dZWXBZxKFMYs0K5Dh'},
 ]
 
-const FooterTwo = () => {
+const FooterMusicasa = () => {
     return (
         <div className="footer-style-2 footer-musicasa bg_image" data-black-overlay="1">
             <div className="wrapper plr--50 plr_sm--20">
@@ -49,4 +49,4 @@ const FooterTwo = () => {
         </div>
     )
 }
-export default FooterTwo;
+export default FooterMusicasa;

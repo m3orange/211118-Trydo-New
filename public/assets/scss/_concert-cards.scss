@@ -19,12 +19,13 @@ Styles for concert cards, based on: Blog Styles
                 @extend %transition;
             }
             &::after {
-                /* background: linear-gradient(to bottom, $theme-color 0, #000000 100%);*/
+                /*
+                This is original style from theme:                
+                background: linear-gradient(to bottom, #fc004d 0, #000000 100%); */
 
                 background-color: $theme-color; /* M3 This should display as #DA59A0 */
                 background-image: linear-gradient($theme-color 10%, #000000 100%); /* Value is a bit brighter than theme magenta, to pump the color up. */
-                        /* Added by M3 to pump up gradient */
-                        background-blend-mode: hard-light; /* M3 Overlay eliminates the black below. */
+                background-blend-mode: hard-light; /* Added by M3 to pump up gradient - M3 Overlay eliminates the black below. */
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -58,7 +59,9 @@ Styles for concert cards, based on: Blog Styles
         &::before {
             position: absolute;
             content: "";
-            background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0, #000000 60%);
+            /* M3 This is the original gradient layer under the content box:root            
+            background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0, #000000 70%);*/
+            background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0, #000000 70%);
             left: 0;
             top: 0;
             width: 100%;
@@ -91,12 +94,13 @@ Styles for concert cards, based on: Blog Styles
                 }
             }
         }
-        .blog-btn {
+        .concert-grid-btns{
             @extend %transition;
-            margin-top: 35px;
+            margin-top: 25px;
             transition: 0.7s;
             opacity: 0;
             visibility: hidden;
+            
             
             @media #{$large-mobile} {
                 margin-top: 22px;
@@ -129,7 +133,7 @@ Styles for concert cards, based on: Blog Styles
             }
         }
         .content{
-            .blog-btn {
+            .concert-grid-btns{
                 opacity: 1;
                 visibility: visible;
             }

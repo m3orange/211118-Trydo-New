@@ -1,15 +1,9 @@
 import React, { Component } from "react";
 import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn } from "react-icons/fa";
 import { FiX , FiMenu} from "react-icons/fi";
-import Scrollspy from 'react-scrollspy'
 import { Link } from 'react-router-dom';
 
-const SocialShare = [
-    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
-    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
-    {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
-    {Social: <FaTwitter /> , link: 'https://twitter.com/'},
-]
+
 class MusicasaHeader extends Component{
     constructor(props) {
         super(props);
@@ -74,8 +68,8 @@ class MusicasaHeader extends Component{
                     <div className="header-left d-flex align-items-center">
                         <div className="logo">
                             <a href="/login">
-                                <img className="logo-1" src="/assets/images-mca/logo/logo-white.png" alt="Logo Images"/>
-                                <img className="logo-2" src="/assets/images-mca/logo/logo-black.png" alt="Logo Images"/>
+                                <img className="logo-1" src="/assets/images-mca/logo/logo-white.png" alt="Musicasa"/>
+                                <img className="logo-2" src="/assets/images-mca/logo/logo-black.png" alt="Musicasa"/>
                             </a>
                         </div>
                     </div>
@@ -88,10 +82,11 @@ class MusicasaHeader extends Component{
                                 <li className="has-droupdown"><Link to="#" >My Profile</Link>
                                     <ul className="submenu">
                                         <li><Link to="#">Artists</Link></li>
-                                        <li><Link to="host-profile">Hosts</Link></li>
+                                        <li><Link to="#">Hosts</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link to="/main-demo" >Demos</Link></li>
+                                <li><a href="/main-demo" >Demos</a></li>
+                                <li><a href="/documentation/index.html">Doc</a></li>
                             </ul>
 
                             

@@ -5,17 +5,16 @@ import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp , FiX , FiMenu } from "react-icons/fi";
 import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn} from "react-icons/fa";
 
-
-import MusicasaHeader from "../../Components/McaHeader";
 import Helmet from "../../Components/McaHelmet";
-import ArtistVideo from "../../Components/McaArtistVideo";
-import BlogList from "../../Components/McaBlogList";
-import FooterTwo from "../../Components/McaFooterTwo";
-
+import MusicasaHeader from "../../Components/McaHeader";
 import ArtistCoverPic from "../../Components/ArtistCoverPic";
-import BlogContent from "../../Components/McaBlogContent";
 import ArtistSlider from "../../Components/ArtistSlider";
+import ArtistVideo from "../../Components/McaArtistVideo";
+import ConcertCardGrid01 from "../../Components/ConcertCardGrid01";
+import FooterMusicasa from "../../Components/McaFooterTwo";
 
+
+import BlogContent from "../../Components/McaBlogContent";
 
 
 
@@ -92,7 +91,7 @@ class ArtistTemplate extends Component{
                                     <div className="profile-pic"></div>
                                     <div className="membership-date">Member since 2019</div>
                                     <div className="social-media-links">
-                                        <ul className="social-share rn-md-size d-flex justify-content-start liststyle">
+                                        <ul className="social-share-profile-bio rn-md-size d-flex justify-content-start liststyle">
                                             {SocialShare.map((val , i) => (
                                                 <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
                                             ))}
@@ -152,9 +151,12 @@ class ArtistTemplate extends Component{
                                     </div>
                                 </div>
                             </div>
-                            {/* Start BlogList.jsx  */}
-                            <BlogList />
-                            {/* End BlogList.jsx  */}
+
+                            {/* Start Concert Card Grid (based on BlogList) */}
+
+                            <ConcertCardGrid01 />
+                            
+                            {/* End Concert Card Grid (based on BlogList) */}
                         </div> 
                         
                     </Parallax>
@@ -171,9 +173,10 @@ class ArtistTemplate extends Component{
                     </ScrollToTop>
                 </div>
                 {/* End Back To Top */}
-                 {/* Start Footer Style  */}
-                 <FooterTwo />
-                {/* End Footer Style  */}
+
+                 {/* Start Footer Style based on FooterTwo  */}
+                 <FooterMusicasa />
+                {/* End  Footer Style based on FooterTwo  */}
                 
 
                 </div>

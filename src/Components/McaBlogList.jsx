@@ -23,18 +23,18 @@ const BlogContent = [
 
 ]
 
-class BLogList extends Component{
+class ConcertCardGrid01 extends Component{
     render() {
         const PostList = BlogContent.slice(0 , 6);
         return (
              <Fragment>
                  <div className="row">
                     {PostList.map((value , i ) => (
-                        <div className="col-lg-6 col-md-6 col-sm-6 col-12" key={i}>
+                        <div className="col-lg-6 col-md-6 col-sm-12 col-12" key={i}>
                             <div className="blog blog-style--1 mca-border-radius">
                                 <div className="thumbnail">
                                     <a href="#">
-                                        <img className="w-100" src={`assets/images-mca/event-cards/artist-${value.images}.jpg`} alt="Blog Images"/>
+                                        <img className="w-100" src={`assets/images-mca/event-cards/artist-${value.images}-400x450.jpg`} alt="Blog Images"/>
                                     </a>
                                 </div>
                                 <div className="content">
@@ -53,4 +53,4 @@ class BLogList extends Component{
         );
     }
 }
-export default BLogList;
+export default ConcertCardGrid01;

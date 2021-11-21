@@ -1,0 +1,113 @@
+/* Social icon Styles  */
+
+ul {
+    &.social-share-profile-bio {
+        padding: 0;
+        margin: 0;
+        margin: -6px;
+        li {
+            margin: 4px;
+            a {
+                width: 40px;
+                display: inline-block;
+                height: 40px;
+                border: 0px;
+                background: rgba(0, 0, 0, 0.3);
+                line-height: 40px; /* M3 To be set in relation to the font-size */
+                color: $theme-white;
+                border-radius: 100%;
+                text-align: center;
+                font-size: 1em;
+                @extend %transition;
+            }
+            &:hover {
+                a {
+                    background: $theme-color-2;
+                    border-color: #fdbc30e6;
+                    color: #FFFFFF;
+                    box-shadow: 0 10px 10px 0 rgba(13, 0, 0, 0.5);
+                    transform: translateY(-4px);
+                }
+            }
+        }
+        &.color-theme{
+            li {
+                a {
+                    border-color: $theme-color;
+                    color: $theme-color;
+                    &:hover {
+                        background: $theme-color;
+                        border-color: $theme-color;
+                        color: #ffffff;
+                        font-size: 16px;
+                    }
+                }
+
+            }
+        }
+        &.rn-lg-size {
+            margin-top: 0 !important;
+            li {
+                a {
+                    width: 50px;
+                    height: 50px;
+                    line-height: 44px;
+                    font-size: 16px;
+                }
+            }
+        }
+        &.social-style--2 {
+            li{
+                a {
+                    border: 0 none;
+                    width: 30px;
+                    height: auto;
+                    text-align: left;
+                    line-height: inherit;
+                    font-size: 16px;
+                }
+                &:hover{
+                    a {
+                        background: transparent;
+                        box-shadow: none;
+
+                    }
+                }
+            }
+            &.color-theme{
+                li {
+                    a {
+                        color: $theme-color;
+                        &:hover {
+                            color: currentColor;
+                        }
+                    }
+
+                }
+            }
+            &.color-black{
+                li {
+                    a {
+                        color: #1d1d24;
+                        opacity: 0.8;
+                        &:hover {
+                            color: $theme-color;
+                            opacity: 1;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
