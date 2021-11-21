@@ -7,7 +7,7 @@
 
 
 #bio-area-container {
-    padding: 60px 0 120px;
+    padding: 70px 0 80px;
     background-color: #FFFFFF;
 }
 #about {
@@ -28,7 +28,7 @@
     background-size: cover;
     background-position: center center;
     background-color: rgba(0,0,0,1);
-    height: 50vh;
+    height: 60vh;
 
         @media #{$md-layout} {
             height: 45vh;
@@ -93,21 +93,35 @@
     }
 }
 
+.social-media-links ul.social-share li a{
+    width: 50px!important;
+    height: 50px!important;
+    display: inline-block;
+    line-height: 3em;
+    font-size: 1em;
+    border: 0px!important;
+    line-height: 45px;
+    color: rgba(255,255,255,1);
+    border-radius: 100%;
+    font-size: 1.4em!important;
+    background-color: rgba(0,0,0,0.85);
+}
+.social-media-links ul.social-share li a:hover{
+    background-color: #FDBB30;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow: (-3px 3px 5px rgba(0, 0, 0, 0.5));
+}
+
+
 .membership-date{
     display: block;
     color: $theme-color;
     margin: 20px 0;
-    font-size: 1em;
+    font-size: 1.3em;
+    font-weight: 600;
 }
 
-/*
-.artist-container ul.social-share.rn-lg-size li a{
-    width: 40px;
-    height: 40px;
-    line-height: 3em;
-    font-size: 1em;
-}
-*/
+
 
 .snippet h3{
     font-size: 2.5em;
@@ -155,7 +169,7 @@
 }
 
 .slider-container{
-    background-color: #FFFFFF;
+    min-height: 50vh;
 }
 
 .about-container h3{

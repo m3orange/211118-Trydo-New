@@ -23,17 +23,22 @@ Mainmenu Area
                 > ul {
                     &.submenu {
                         @extend %liststyle;
+                        /*
                         min-width: 240px;
+                        */ 
+
+                        min-width: 50px;
                         height: auto;
                         position: absolute;
                         top: 100%;
-                        left: 0;
+                        /*right: 0px;  M3 211120_2121 - Was left */
+                        right: 0px;
                         z-index: 90;
                         opacity: 0;
                         visibility: hidden;
                         background-color: #fff;
                         box-shadow: 0 0 35px rgba(0,0,0,0.1);
-                        text-align: left;
+                        text-align: right;
                         @extend %transition;
                         padding: 12px 0;
                         border-radius: 4px;

@@ -9,7 +9,7 @@ Styles for concert cards, based on: Blog Styles
     margin-bottom: 40px;
     @extend %transition;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 15px;
     .thumbnail {
         a {
             display: block;
@@ -46,7 +46,7 @@ Styles for concert cards, based on: Blog Styles
         position: absolute;
         bottom: -92px;
         width: 100%;
-        padding: 50px 35px;
+        padding: 70px 55px;
         z-index: 3;
         @extend %transition;
         @media #{$large-mobile} {
@@ -58,7 +58,7 @@ Styles for concert cards, based on: Blog Styles
         &::before {
             position: absolute;
             content: "";
-            background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0, #000000 70%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0, #000000 60%);
             left: 0;
             top: 0;
             width: 100%;
@@ -71,10 +71,11 @@ Styles for concert cards, based on: Blog Styles
             }
         }
         p{
-            &.blogtype{
-                font-size: 14px;
+            &.event-date{
+                font-size: 1.1em;
+                font-weight: 600;
                 margin-bottom: 5px;
-                color: #c6c9d8;
+                color: rgba(255,255,255,1);
             }
         }
         h4{
@@ -82,9 +83,10 @@ Styles for concert cards, based on: Blog Styles
                 margin-bottom: 0;
                 a{
                     color: #ffffff;
-                    font-size: 24px;
-                    font-weight: 500;
-                    line-height: 36px;
+                    font-size: 1.5em; /* M3 Was 24px */
+                    line-height: 1.2em;
+                    font-weight: 600;
+                    letter-spacing: 0.06em; /* Added by M3 */
                     @extend %transition;
                 }
             }
@@ -137,3 +139,8 @@ Styles for concert cards, based on: Blog Styles
 
 
 
+.omg{
+    padding:80px 60px;
+    display: flex;
+    justify-content: center;
+}

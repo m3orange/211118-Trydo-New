@@ -59,24 +59,27 @@
 	|___ END STYLESHEET INDEXING
 
 ***************************************************************/
-
+@import '_musicasa-variables'; /* M3 This has to stay at the top so all dependencies can keep working. */
 
 /**************************************
     Default Styles
 ***************************************/
+/*
 @import 'default/variables';
+@import 'default/typography';
+@import 'default/extend';
+*/
 @import 'default/mixins';
 @import 'default/reset';
-/*
-@import 'default/typography';
-*/
-@import 'default/extend';
+
 @import 'default/animations';
 @import 'default/shortcode';
 @import 'default/spacing';
 @import 'default/header';
 @import 'default/mainmenu';
+/*
 @import 'default/blog';
+*/
 @import 'default/blog-details';
 @import 'default/breadcrump';
 @import 'default/section-title';
@@ -133,7 +136,8 @@
 
 @import '_artist-profile.scss';
 @import '_host-profile.scss';
-@import '_musicasa-variables';
+
+@import '_musicasa-extend';
 @import '_musicasa-typography';
 
 @import '_musicasa-global.scss';
@@ -144,3 +148,4 @@
 
 @import '_musicasa-footer.scss';
 @import '_musicasa-overrides';
+@import '_musicasa-custom';

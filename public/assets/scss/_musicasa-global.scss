@@ -25,23 +25,12 @@
     background-color: yellow;
 }
 
+ul.mainmenu>li>ul.submenu {
+    max-width: fit-content!important;
+    position: absolute;
+    right: 0!important;
 
-.section-concerts{
-   border: 4px solid white; 
-   background-color: $theme-color-2;
-   background-image: url(/assets/images-mca/bg/mca-image-08c.jpg); 
-   background-repeat: no-repeat;
-   background-position: top center;
-
-        @media #{$md-layout} {
-            background-image: url(/assets/images-mca/bg/mca-image-08c.jpg);
-        }
-        @media #{$large-mobile} {
-            background-image: url(/assets/images-mca/bg/mca-bg-image-03-mobile-2x.jpg);
-        }
 }
-
-
 
 .concert-card-grid-bg{
     padding: 200px 0;

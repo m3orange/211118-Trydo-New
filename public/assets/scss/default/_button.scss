@@ -40,15 +40,17 @@ button {
         display: inline-block;
         line-height: 34px;
         border: 2px solid $theme-color;
-        border-radius: 4px;
-        font-size: 14px;
+        border-radius: 0px;
+        font-size: 1em;
+        font-weight: 600;
         position: relative;
         z-index: 2;
         // font-family: Montserrat;
         color: $theme-color;
-        letter-spacing: 0.2px;
+        letter-spacing:0.18em;
         @extend %transition;
         text-transform: uppercase;
+        background-color: $theme-color;
         &:hover {
             border: 2px solid $theme-color;
             transform: translateY(-3px);

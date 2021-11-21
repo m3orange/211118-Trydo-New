@@ -114,9 +114,6 @@ class ArtistTemplate extends Component{
                     </div>
                     {/* End Bio Header (based on Portfolio Details) */}
 
-                
-
-
                     {/* Start About Area */}
                     <div id="about" className="about-area mca-gradient-01">
                         <div className="about-wrapper">

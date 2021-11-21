@@ -32,6 +32,9 @@ class ArtistVideo extends Component {
                                         <button className="video-popup position-top-center" onClick={this.openModal}><span className="play-icon"></span></button>
                                     </div>
                                 </div>
+                                <div className="col-lg-12 ptb-80 omg">
+                                    <button className="btn draw-border">View More</button>
+                                </div>
                             </div>
                         </div>
                     </div>
