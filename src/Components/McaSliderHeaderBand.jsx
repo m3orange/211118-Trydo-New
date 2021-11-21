@@ -11,7 +11,7 @@ const SlideList = [
     }
 ]
 
-class SliderFour extends Component {
+class SliderHeaderBand extends Component {
   render() {
     return (
         <div className="slider-activation">
@@ -37,4 +37,4 @@ class SliderFour extends Component {
     );
   }
 }
-export default SliderFour;
+export default SliderHeaderBand;

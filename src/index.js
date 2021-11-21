@@ -65,7 +65,7 @@ import Login from './Pages/Login/Login';
 import HostProfile from './Pages/HostProfile/HostProfile';
 import ArtistProfile from './Pages/ArtistProfile/ArtistProfile';
 import MCATemplatePage from './Pages/ArtistProfile/MCATemplatePage';
-
+import ArtistTemplate from './Pages/ArtistProfile/ArtistTemplate';
 
 class Root extends Component{
     render(){
@@ -124,7 +124,7 @@ class Root extends Component{
                         <Route exact path={`${process.env.PUBLIC_URL}/host-profile`} component={HostProfile}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/artist-profile`} component={ArtistProfile}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/template-page`} component={MCATemplatePage}/>
-                        
+                        <Route exact path={`${process.env.PUBLIC_URL}/artist-template`} component={ArtistTemplate}/>                
                         <Route path={`${process.env.PUBLIC_URL}/404`} component={error404}/>
                         <Route component={error404}/>
 

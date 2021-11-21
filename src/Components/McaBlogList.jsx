@@ -30,10 +30,10 @@ class BLogList extends Component{
              <Fragment>
                  <div className="row">
                     {PostList.map((value , i ) => (
-                        <div className="col-lg-6 col-md-6 col-sm-6 col-12" key={i}>
+                        <div className="col-lg-4 col-md-6 col-sm-6 col-12" key={i}>
                             <div className="blog blog-style--1">
                                 <div className="thumbnail">
-                                    <a href="/blog-details">
+                                    <a href="#">
                                         <img className="w-100" src={`assets/images-mca/event-cards/artist-${value.images}.jpg`} alt="Blog Images"/>
                                     </a>
                                 </div>
@@ -41,7 +41,7 @@ class BLogList extends Component{
                                     <p className="blogtype">{value.category}</p>
                                     <h4 className="title"><a href="/blog-details">{value.title}</a></h4>
                                     <div className="blog-btn">
-                                        <a className="rn-btn text-white" href="/blog-details">More</a>
+                                        <a className="rn-btn text-white" href="#">More</a>
                                     </div>
                                 </div>
                             </div>

@@ -18,12 +18,11 @@ class ArtistVideo extends Component {
             <>
 
 
-
-
                 {/* Start Page Wrapper  */}
-                <main className="page-wrapper">
+                <main className="section-video">
+
                     {/* Start Video Area  */}
-                    <div className="rn-section ptb--120 bg_color--1 line-separator">
+                    <div className="rn-section ptb--180">
                         <div className="container">
                              <div className="row sercice-details-content align-items-center">
                                 <div className="col-lg-12">

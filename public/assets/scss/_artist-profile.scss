@@ -2,6 +2,11 @@
     Musicasa > Artist Profile
 ----------------------------*/
 
+
+.artist-container{
+    background-color: blue;
+}
+
 .concert-cards-artist{
 
     background-image: url(/assets/images-mca/paralax/bg-image-08c.jpg) !important;
@@ -12,9 +17,90 @@
 
 .profile-cover-pic-artists,
 .profile-cover-pic-hosts {
+    background-image: url(/assets/images-mca/artists/artist-cover-pic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-color: rgba(0,0,0,1);
     height: 50vh;
 }
+
+.bio-area-container{
+    background-color: #FFFFFF;
+    padding: 120px 0;
+}
+
+.bio-area-container .left-area{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bio-area-container .right-area{
+
+    /* align-content: center; 
+
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    */
+
+    text-align: left;
+        @media #{$sm-layout} {
+            justify-content: center;
+            text-align: center;
+        }
+
+}
+
+.profile-pic{
+    width: 250px;
+    height:250px;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.membership-date{
+    display: block;
+}
+
+/*
+.artist-container ul.social-share.rn-lg-size li a{
+    width: 40px;
+    height: 40px;
+    line-height: 3em;
+    font-size: 1em;
+}
+*/
+
+.snippet h3{
+    font-size: 2.5em;
+}
+
+.genre-and-city{
+    font-family: $body-font;
+    font-size: 1.2em;
+    margin-top: 20px;
+
+}
+
+.genre-and-city h5{
+    color: $body-color;
+    font-family: $body-font;
+    margin-bottom: 6px;
+}
+
+.block-genres, .block-location{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.artist-container h1,
+.artist-container h2,
+.artist-container h3,
+.artist-container h4,
+.genre-and-city{
+    color: $body-color;
+    line-height: 1.2em;
+    font-weight: 400;
+} 

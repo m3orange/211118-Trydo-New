@@ -14,10 +14,12 @@ import ArtistVideo from "../../Components/McaArtistVideo";
 import BlogList from "../../Components/McaBlogList";
 import FooterTwo from "../../Components/McaFooterTwo";
 
-import HostCoverPic from "../../Components/McaHostCoverPic";
+import ArtistCoverPic from "../../Components/ArtistCoverPic";
 import BlogContent from "../../Components/McaBlogContent";
 import ArtistSlider from "../../Components/ArtistSlider";
 
+const image8 = 
+  "/assets/images-mca/bg/mca-bg-image-parallax-01.jpg";
 
 
 const SocialShare = [
@@ -96,47 +98,50 @@ class ArtistProfile extends Component{
 
 
                     {/* Start Host Cover Pic (based on Breadcrumb)  */}
-                    <HostCoverPic />
+                    <ArtistCoverPic />
                     {/* End Host Cover Pic (based on Breadcrumb)  */}
 
                     {/* Start Bio Header (based on Portfolio Details) */}
                     <div className="rn-portfolio-details ptb--120 bg_color--1">
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="portfolio-details">
-                                        <div className="inner">
-                                            <h2>Nicky Stefan</h2>
-                                            <p className="subtitle">Erik and Isabella’s home offers the perfect setting for a perfect music night, under a string of lights and orange and purple skies.</p>
- 
+                                <div className="col-lg-4">
+                                    <div className="profile-pic"></div>
+                                    <div className="portfolio-share-link mt--20 pb--70 pb_sm--40">
+                                        <ul className="social-share rn-lg-size d-flex justify-content-start liststyle mt--15">
+                                            {SocialShare.map((val , i) => (
+                                                <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                    <div className="membership-date"></div>
+                                </div>
+                                <div className="col-lg-8">
 
-                                            <div className="portfolio-view-list d-flex flex-wrap">
-                                                <div className="port-view">
-                                                    <span>Branch</span>
-                                                    <h4>Ability</h4>
-                                                </div>
+                                    <h1>Nicky Stefan</h1>
+                                    <div className="snippet"><h2>A talented jazz singer, Stefan has been fusing jazz and Latino sounds since lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2></div>
+                                    <div className="row genre-and-city">
+                                        <div className="col-6">Genres: Jazz / Blues / Soul… More +</div>
+                                        <div className="col-6">Location: Miami, Florida</div>
+                                    </div>                                                
 
-                                                <div className="port-view">
-                                                    <span>Project Types</span>
-                                                    <h4>Website</h4>
-                                                </div>
-
-                                                <div className="port-view">
-                                                    <span>Program</span>
-                                                    <h4>View Project</h4>
-                                                </div>
-                                            </div>
-
-                                            <div className="portfolio-share-link mt--20 pb--70 pb_sm--40">
-                                                <ul className="social-share rn-lg-size d-flex justify-content-start liststyle mt--15">
-                                                    {SocialShare.map((val , i) => (
-                                                        <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
-                                                    ))}
-                                                </ul>
-                                            </div>
+                                    <div className="portfolio-view-list d-flex flex-wrap">
+                                        <div className="port-view">
+                                            <span>Branch</span>
+                                            <h4>Ability</h4>
                                         </div>
 
+                                        <div className="port-view">
+                                            <span>Project Types</span>
+                                            <h4>Website</h4>
+                                        </div>
+
+                                        <div className="port-view">
+                                            <span>Program</span>
+                                            <h4>View Project</h4>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -171,9 +176,24 @@ class ArtistProfile extends Component{
                     <ArtistVideo />
                     {/* End VideoPopup Area */}
 
-                    {/* Start Concert Cards inside Parallax (based on Blog Area in Startup) */}
-                    <Parallax className="rn-blog-area rn-testimonial-light" strength={700} data-black-overlay="7">
-                        <div className="blog-area ptb--120" data-black-overlay="6">
+
+                    {/* Start Video Area  */}
+                    <div className="section-video-embed rn-section ptb--180">
+                        <div className="container ptb-100">
+                            <div className="row sercice-details-content align-items-center">
+                                <div className="col-lg-12">
+                                    <iframe src="https://www.youtube.com/embed/BD7_AW9H97M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* End Video Area  */}
+
+     
+
+                    {/* Start Concert Cards inside Parallax (based on Blog Area in Paralax) */}
+                    <Parallax className="section-concerts rn-blog-area rn-testimonial-light" strength={700} data-black-overlay="7">
+                        <div className="blog-area concert-card-grid-bg" data-black-overlay="1">
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-12">
@@ -189,13 +209,8 @@ class ArtistProfile extends Component{
                         </div>
                         
                     </Parallax>
-                    {/* End Concert Cards inside Parallax (based on Blog Area in Startup) */}
+                    {/* End Concert Cards inside Parallax (based on Blog Area in Paralax) */}
 
-
-
-
-                </main>
-                {/* End Page Wrapper  */}
 
                 {/* Start Back To Top */}
                 <div className="backto-top">
@@ -204,6 +219,11 @@ class ArtistProfile extends Component{
                     </ScrollToTop>
                 </div>
                 {/* End Back To Top */}
+
+                </main>
+                {/* End Page Wrapper  */}
+
+
                  {/* Start Footer Style  */}
                  <FooterTwo />
                 {/* End Footer Style  */}
