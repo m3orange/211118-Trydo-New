@@ -12,7 +12,7 @@ import ArtistSlider from "../../Components/ArtistSlider";
 import ArtistVideo from "../../Components/McaArtistVideo";
 import ConcertCardGrid01 from "../../Components/ConcertCardGrid01";
 import FooterMusicasa from "../../Components/McaFooterTwo";
-
+import TabsForConcertGrid from "../../elements/tab/TabsForConcertGrid";
 
 import BlogContent from "../../Components/McaBlogContent";
 
@@ -88,7 +88,9 @@ class ArtistTemplate extends Component{
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 col-md-12 col-lg-4 col-lg-4 left-area">
-                                    <div className="profile-pic"></div>
+                                    <div className="profile-pic">
+                                        <img src="assets/images-mca/artists/artist-profile-pic.jpg" className="clip-path-circle-01"/>
+                                    </div>
                                     <div className="membership-date">Member since 2019</div>
                                     <div className="social-media-links">
                                         <ul className="social-share-profile-bio rn-md-size d-flex justify-content-start liststyle">

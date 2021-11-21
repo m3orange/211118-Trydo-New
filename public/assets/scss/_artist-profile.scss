@@ -23,18 +23,20 @@
 
 .profile-cover-pic-artists,
 .profile-cover-pic-hosts {
-    background-image: url(/assets/images-mca/artists/artist-cover-pic.jpg);
+    background-image: url(/assets/images-mca/artists/artist-cover-pic-02.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-color: rgba(0,0,0,1);
     height: 60vh;
 
-        @media #{$md-layout} {
-            height: 45vh;
-        }
+
         @media #{$sm-layout} {
-            height: 35vh;
+            height: 55vh;
+            background-image: url(/assets/images-mca/artists/artist-cover-pic-mob.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom center;
         }
 }
 
@@ -48,13 +50,17 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-    margin-top: -25%;
+    margin-top: -35%;
     z-index: 10;
 
     @media #{$md-layout} {
         flex-wrap: wrap;
         justify-content: center;
 
+    }
+
+    @media #{$sm-layout} {
+        margin-top: -60%;
     }
 }
 
@@ -76,22 +82,39 @@
 
 .profile-pic{
     margin: 0px;
-    background-color: rgba(255, 0, 0, 0.8);
     width: 300px;
     height: 300px;
+    border-radius: 50%;
+    border: 4px solid white;
+
+    box-shadow: 0px 2px 6x 4px rgba(0,0,0,0.4);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+        -webkit-box-shadow: 0px 2px 6px 4px rgba(0,0,0,0.4);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow:    0px 2px 6px 4px rgba(0,0,0,0.4);  /* Firefox 3.5 - 3.6 */
+
 
     @media #{$md-layout} {
-        background-color: rgba(13, 197, 93, 0.8);
-        width: 200px;
-        height: 200px;
+        border: 4px solid red;
+
     }
 
     @media #{$sm-layout} {
-        background-color: rgba(17, 0, 255, 0.8);
-        width: 200px;
-        height: 200px;
+        border: 4px solid blue;
+
     }
 }
+
+
+
+
+.clip-path-circle-01{
+    clip-path: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+
+}
+
+
+
+
 
 /* 
 .social-media-links ul.social-share li a{
@@ -157,7 +180,45 @@
 } 
 
 
+.profile-pic{
+    margin: 0px;
 
+    @media #{$md-layout} {
+        border: 4px solid red;
+    }
+
+    @media #{$sm-layout} {
+        border: 4px solid blue;
+    }
+}
+
+
+
+.artist-container h1{
+    font-size: 4em;
+    border-bottom: 2px solid red;
+
+    @media #{$md-layout} {
+        font-size: 3em;
+        border-bottom: 2px solid orange;
+    }
+
+    @media #{$sm-layout} {
+        font-size: 3em;
+        border-bottom: 2px solid yellow;
+    }
+}
+
+
+
+/*
+$h1: 4.25em;
+$h2: 4em;
+$h3: 3.375em;
+$h4: 1.5em;
+$h5: 1.25em;
+$h6: 1.125em;
+*/
 
 
 /* --------- About & Slider  ---------- */

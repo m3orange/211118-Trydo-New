@@ -74,13 +74,15 @@ class MusicasaHeader extends Component{
                         </div>
                     </div>
                     <div className="header-right">
-                        <nav className="mainmenunav d-lg-block ml--50">
+                        <nav className="mainmenunav mainmenunav-musicasa d-lg-block ml--50">
 
-                            <ul className="mainmenu">
+                            <ul className="mainmenu mainmenu-musicasa">
                                 <li><a href="/login">Home</a></li>
                                 <li><a href="https://www.musicasaa.com/concerts">Concerts</a></li>
-                                <li className="has-droupdown"><Link to="#" >My Profile</Link>
-                                    <ul className="submenu">
+                                <li className="has-droupdown">
+                                    <i className="icon-profile"><img src="assets/svg/icon-profile-gradient.svg" /></i>
+                                    <Link to="#">My Profile</Link>
+                                    <ul className="submenu submenu-musicasa">
                                         <li><Link to="#">Artists</Link></li>
                                         <li><Link to="#">Hosts</Link></li>
                                     </ul>

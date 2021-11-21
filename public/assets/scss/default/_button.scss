@@ -67,44 +67,6 @@ button {
     }
 }
 
-a ,
-button {
-    &.btn-concert-card {
-        /* How the btn's height was originally set:
-        padding: 0 30px;
-        height: 50px;
-        line-height: 50px; --- M3 This is contributing to the button's overall height */
-        padding: 8px 32px;
-        display: inline-block;
-        border: 1px solid $theme-color;
-        background-color: $theme-color; /* M3 */
-        font-size: 1.1em;
-        letter-spacing:0.18em;
-        font-weight: 600;
-        border-radius: 0px;
-        position: relative;
-        z-index: 2;
-        font-family: $body-font;
-        color:#FFFFFF!important;
-
-        @extend %transition;
-        text-transform: uppercase;
-
-        &:hover {
-            border: 1px solid rgba(0, 0, 0, 0.85);
-            transform: translateY(-3px);
-            color: #ffffff;
-            background: rgba(0, 0, 0, 0.7);
-        }
-        &.btn-white {
-            border: 1px solid #ffffff;
-            color: #ffffff;
-            &:hover {
-                border-color: $theme-color;
-            }
-        }
-    }
-}
 
 
 
