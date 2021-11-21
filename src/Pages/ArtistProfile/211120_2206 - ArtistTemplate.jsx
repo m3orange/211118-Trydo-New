@@ -88,7 +88,7 @@ class ArtistTemplate extends Component{
                     <div id="bio-area-container" className="rn-portfolio-details">
                         <div className="container">
                             <div className="row">
-                                <div className="col-12 col-md-12 col-lg-4 col-lg-4 left-area">
+                                <div className="col-12 col-md-4 col-lg-4 left-area">
                                     <div className="profile-pic"></div>
                                     <div className="portfolio-share-link">
                                         <ul className="social-share rn-md-size d-flex justify-content-start liststyle mt--15">
@@ -100,7 +100,7 @@ class ArtistTemplate extends Component{
                                     <div className="membership-date">Member since 2019</div>
                                 </div>
 
-                                <div className="col-12 col-md-12 col-lg-8 col-lg-8 right-area">
+                                <div className="col-12 col-md-8 col-lg-8 right-area">
                                     <h1>Nicky Stefan</h1>
                                     <div className="snippet"><h3>A talented jazz singer, Stefan has been fusing jazz and Latino sounds since lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3></div>
                                     <div className="row genre-and-city ">
@@ -139,19 +139,21 @@ class ArtistTemplate extends Component{
                     {/* End VideoPopup Area */}
 
                     {/* Start Concert Cards inside Parallax (based on Blog Area in Startup) */}
-                    <Parallax className="concerts-section rn-blog-area rn-testimonial-light" strength={700} data-black-overlay="6">
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="section-title service-style--2 text-center mb--30 mb_sm--0">
-                                        <h2>Concerts</h2>
+                    <Parallax className="rn-blog-area rn-testimonial-light" strength={700} data-black-overlay="7">
+                        <div className="blog-area ptb--120" data-black-overlay="6">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-lg-12">
+                                        <div className="section-title service-style--2 text-center mb--30 mb_sm--0">
+                                            <h2>Concerts</h2>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            {/* Start BlogList.jsx  */}
-                            <BlogList />
-                            {/* End BlogList.jsx  */}
-                        </div> 
+                                {/* Start BlogList.jsx  */}
+                                <BlogList />
+                                {/* End BlogList.jsx  */}
+                            </div> 
+                        </div>
                         
                     </Parallax>
                     {/* End Concert Cards inside Parallax (based on Blog Area in Startup) */}

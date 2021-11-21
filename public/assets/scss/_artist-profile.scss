@@ -1,19 +1,25 @@
 /*--------------------------
     Musicasa > Artist Profile
 ----------------------------*/
-
-
 .artist-container{
-    background-color: blue;
+    background-color: #FFFFFF;
 }
 
-.concert-cards-artist{
 
-    background-image: url(/assets/images-mca/paralax/bg-image-08c.jpg) !important;
-    position: relative; overflow: hidden;
-
-    
+#bio-area-container {
+    padding: 60px 0 120px;
+    background-color: #FFFFFF;
 }
+#about {
+    padding: 200px 0;
+
+}
+
+#concert-section{
+    /* Undefined */
+}
+
+/* --------- Header Cover Pic Band ---------- */
 
 .profile-cover-pic-artists,
 .profile-cover-pic-hosts {
@@ -23,22 +29,37 @@
     background-position: center center;
     background-color: rgba(0,0,0,1);
     height: 50vh;
+
+        @media #{$md-layout} {
+            height: 45vh;
+        }
+        @media #{$sm-layout} {
+            height: 35vh;
+        }
 }
 
-.bio-area-container{
-    background-color: #FFFFFF;
-    padding: 120px 0;
-}
 
-.bio-area-container .left-area{
+
+/* --------- Bio Bar  ---------- */
+
+.left-area{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
+    margin-top: -25%;
+    z-index: 10;
+
+    @media #{$md-layout} {
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
 }
 
-.bio-area-container .right-area{
-
+.right-area{
+    text-align: left;
     /* align-content: center; 
 
     display: flex;
@@ -46,22 +67,37 @@
     flex-wrap: wrap;
     */
 
-    text-align: left;
-        @media #{$sm-layout} {
-            justify-content: center;
-            text-align: center;
-        }
+    @media #{$sm-layout} {
+        justify-content: center;
+        text-align: center;
+    }
 
 }
 
 .profile-pic{
-    width: 250px;
-    height:250px;
-    background-color: rgba(0,0,0,0.8);
+    margin: 0px;
+    background-color: rgba(255, 0, 0, 0.8);
+    width: 300px;
+    height: 300px;
+
+    @media #{$md-layout} {
+        background-color: rgba(13, 197, 93, 0.8);
+        width: 200px;
+        height: 200px;
+    }
+
+    @media #{$sm-layout} {
+        background-color: rgba(17, 0, 255, 0.8);
+        width: 200px;
+        height: 200px;
+    }
 }
 
 .membership-date{
     display: block;
+    color: $theme-color;
+    margin: 20px 0;
+    font-size: 1em;
 }
 
 /*
@@ -104,3 +140,53 @@
     line-height: 1.2em;
     font-weight: 400;
 } 
+
+
+
+
+
+/* --------- About & Slider  ---------- */
+
+
+.about-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.slider-container{
+    background-color: #FFFFFF;
+}
+
+.about-container h3{
+    color: $theme-color;
+}
+
+
+
+/* --------- Concert Card Grid  ---------- */
+
+
+.concert-cards-artist{
+
+    background-image: url(/assets/images-mca/bg/bg-image-01.jpg) !important;
+    position: relative; overflow: hidden;
+
+    
+}
+
+.concerts-section{
+    padding: 200px 0;
+    background-color: #FDBB30;
+    background-image: url(/assets/images-mca/bg/mca-image-08c.jpg); 
+    background-repeat: no-repeat;
+    background-position: top center;
+ 
+         @media #{$md-layout} {
+             background-image: url(/assets/images-mca/bg/mca-image-08c.jpg);
+         }
+         @media #{$large-mobile} {
+             background-image: url(/assets/images-mca/bg/mca-bg-image-03-mobile-2x.jpg);
+         }
+ }
+ 

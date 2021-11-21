@@ -54,7 +54,6 @@ $colorList: $color-1, $color-2 ,$color-3 ,$color-4;
 
 
 
-
 //===== Line Height =====//
 $body-line-height: 1.714286;
 //==== Font size =====//
@@ -103,4 +102,20 @@ $small-mobile: 'only screen and (max-width: 479px)';
     .container {
         width: 320px;
     }
+}
+
+
+
+
+/*===============================
+    M3 - Mca Custom Gradients
+=================================*/
+
+
+.mca-gradient-01{
+    background:linear-gradient(0deg, #DA59A0 0%, #F1696A 40%,  #FDBB30 100%);
+        background:-webkit-linear-gradient(0deg, #DA59A0 0%, #F1696A 40%, #FDBB30 100%);
+        background:-moz-linear-gradient(0deg, #DA59A0 0%, #F1696A 40%, #FDBB30 100%);
+        background:-ms-linear-gradient(0deg, #DA59A0 0%, #F1696A 40%, #FDBB30 100%);
+        background:-o-linear-gradient(0deg, #DA59A0 0%, #F1696A 40%, #FDBB30 100%);
 }
