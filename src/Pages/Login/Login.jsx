@@ -1,124 +1,149 @@
 import React, { Component , Fragment } from "react";
-import {Link} from "react-router-dom";
-import { Parallax } from "react-parallax";
 import ScrollToTop from 'react-scroll-up';
-import Slider from "react-slick";
-import { FiChevronUp , FiX , FiMenu } from "react-icons/fi";
-import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn} from "react-icons/fa";
+import { FiChevronUp } from "react-icons/fi";
+import {FaTwitter ,FaInstagram ,FaFacebookF , FaYoutube, FaSpotify} from "react-icons/fa";
 
+import Helmet from "../../Components/Helmet";
 
 import MusicasaHeader from "../../Components/McaHeader";
-import Helmet from "../../Components/McaHelmet";
-
 import FooterMusicasa from "../../Components/FooterMusicasa";
 
-import BlogContent from "../../Components/McaBlogContent";
+import BlogContent from "../../elements/blog/BlogContent";
+import ModalVideo from 'react-modal-video';
+import { videoTagString, VideoTag } from 'react-video-tag';
+
+videoTagString({ src: '/assets/images/service/video.mp4', poster: '/assets/images/bg/bg-image-24.jpg' })
 
 
 
+/* This page template – Based on Startup Agency - Fullwidth video view */
 
-
-const SocialShare = [
-    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
-    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
-    {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
-    {Social: <FaTwitter /> , link: 'https://twitter.com/'},
+const SlideList = [
+    {
+        textPosition: 'text-left',
+        category: '',
+        title: 'Welcome Video Studio',
+        description: 'There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.',
+        buttonText: 'Contact Us',
+        buttonLink: '/contact'
+    }
 ]
 
+const SocialShare = [
+    {Social: <FaInstagram /> , link: 'https://www.instagram.com/musicasaa/'},
+    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/Musicasaa/'},
+    {Social: <FaYoutube /> , link: 'https://www.youtube.com/channel/UCLdAapdJUAqtOyOFqcOp3wg'},
+    {Social: <FaTwitter /> , link: 'https://twitter.com/musicasalive?lang=en'},
+    {Social: <FaSpotify /> , link: 'https://open.spotify.com/playlist/7lDn8dZWXBZxKFMYs0K5Dh'},
+]
 
-
-class Login extends Component{
-    constructor(props) {
-        super(props);
-        this.menuTrigger = this.menuTrigger.bind(this);
-        this.CLoseMenuTrigger = this.CLoseMenuTrigger.bind(this);
-        this.stickyHeader = this.stickyHeader.bind(this);
-
-       //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
-        window.addEventListener('load', function() {
-            console.log('All assets are loaded');
-        })
-    }
-    menuTrigger() {
-        document.querySelector('.header-wrapper').classList.toggle('menu-open')
-    }
-    CLoseMenuTrigger() {
-        document.querySelector('.header-wrapper').classList.remove('menu-open')
-    }
-    stickyHeader () {}
-    render(){
-        const PostList = BlogContent.slice(0 , 5);
-        
-        window.addEventListener('scroll', function() {
-            var value = window.scrollY;
-            if (value > 100) {
-                document.querySelector('.header--fixed').classList.add('sticky')
-            }else{
-                document.querySelector('.header--fixed').classList.remove('sticky')
-            }
-        });
-
-        var elements = document.querySelectorAll('.has-droupdown > a');
-        for(var i in elements) {
-            if(elements.hasOwnProperty(i)) {
-                elements[i].onclick = function() {
-                    this.parentElement.querySelector('.submenu').classList.toggle("active");
-                    this.classList.toggle("open");
-                }
-            }
+class FullwidthLogin extends Component{
+    constructor () {
+        super()
+        this.state = {
+            isOpen: false
         }
-        
+        this.openModal = this.openModal.bind(this)
+    }
+    openModal () {
+        this.setState({isOpen: true})
+    }
+    render(){
+        const PostList = BlogContent.slice(0 , 3);
         return(
             <Fragment>
-                <Helmet pageTitle="Homepage" />
-                <div className="musicasa-container">
-                
-                {/* Start HeaderThree Area  */}
-                <MusicasaHeader />
-                {/* End HeaderThree Area  */}
+                <Helmet pageTitle="Login" />
+                <div className="login-container" styl="background-color: black;">
 
-                {/* Start Main Tag with Page Wrapper  */}
-                <main className="page-wrapper">
+                    {/* Start HeaderThree Area  */}
+                    <MusicasaHeader />
+                    {/* End HeaderThree Area  */}
 
-                    <div className="slider-activation">
-                    {/* Start Single Slide */}
-                        <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center bg_image mca-bg-image-parallax-01" data-black-overlay="1">
-                            <div className="container">
-                                <div className="row">
-                                    <div className="col-lg-12">
-                                        <div className="">
-                                            <div className="slide-btn">
-                                                <a className="rn-button-style--2 btn-primary-color" href="">Text</a>
+                    {/* Start Slider Area   */}
+                    <div className="slider-wrapper">
+                        {/* Start Single Slide */}
+                        {SlideList.map((value , index) => (
+                            <div className="slide slide-style-2 slider-video-bg d-flex align-items-center justify-content-center" key={index} data-black-overlay="6">
+                                <div className="container">
+                                    <div className="row align-items-center">
+                                        <div className="col-lg-8">
+                                            <div className={`inner ${value.textPosition}`}>
+                                                {value.category ? <span>{value.category}</span> : ''}
+                                                {value.title ? <h1 className="title">{value.title}</h1> : ''}
+                                                {value.description ? <p className="description">{value.description}</p> : ''}
+                                            </div>
                                         </div>
+                                        <div className="col-lg-4">
+                                            <div className="video-inner">
+                                                <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='ZOoVOfieAF8' onClose={() => this.setState({isOpen: false})} />
+                                                <button className="video-popup theme-color" onClick={this.openModal}><span className="play-icon"></span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="video-background">
+                                    <VideoTag autoPlay={`${true}`} muted={`${true}`} playsInline={`${true}`} loop={`${true}`}  src={`${"/assets/images/service/video.mp4"}`} poster={`${"/assets/images/bg/bg-image-24.jpg"}`} />
+                                </div>
+                            </div>
+                        ))}
+                        {/* End Single Slide */}
+
+                        
+                    </div>
+                    {/* End Slider Area   */}
+
+
+
+
+                    {/* Start Footer Style based on FooterTwo  */}
+                    <div className="footer-style-2 footer-musicasa footer-home-variation bg_image" data-black-overlay="1">
+                        <div className="wrapper plr--50 plr_sm--20">
+                            <div className="row align-items-center justify-content-between">
+                                <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div className="inner">
+                                        <div className="logo text-center text-sm-left mb_sm--20 footer-mca-logo">
+                                            <a href="/login">
+                                                <img src="/assets/images-mca/logo/logo-white-2x.png" alt="Logo images"/>
+                                            </a>
+                                            <div className="footer-miami-love">Made with 💛 in Miami.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div className="inner text-center">
+                                        <ul className="social-share rn-md-size d-flex justify-content-center liststyle">
+                                            {SocialShare.map((val , i) => (
+                                                <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="col-lg-4 col-md-12 col-sm-12 col-12">
+                                    <div className="inner text-lg-right text-center mt_md--20 mt_sm--20">
+                                        <div className="footer-copyright-links">
+                                            ©Musicasa Corporation 2021, All Rights Reserved.<br />
+                                            <a href="https://www.musicasaa.com/termsandconditions" target="_blank" className="terms">
+                                            Privacy Policy &amp; Terms and Conditions
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    {/* End Single Slide */}
                     </div>
+                    {/* End  Footer Style based on FooterTwo  */}
 
-
-                </main>
-                {/* End Main Tag with Page Wrapper  */}
-
-                {/* Start Back To Top */}
-                <div className="backto-top">
-                    <ScrollToTop showUnder={160}>
-                        <FiChevronUp />
-                    </ScrollToTop>
-                </div>
-                {/* End Back To Top */}
-                 {/* Start Footer Style  */}
-                 <FooterMusicasa />
-                {/* End Footer Style  */}
-                
+                    {/* Start Back To Top */}
+                    <div className="backto-top">
+                        <ScrollToTop showUnder={160}>
+                            <FiChevronUp />
+                        </ScrollToTop>
+                    </div>
+                    {/* End Back To Top */}
 
                 </div>
-
             </Fragment>
         )
     }
 }
-
-export default Login;
+export default FullwidthLogin;

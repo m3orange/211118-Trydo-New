@@ -5,7 +5,7 @@ import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp , FiX , FiMenu } from "react-icons/fi";
 import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn, FaRegCheckCircle} from "react-icons/fa";
 
-import Helmet from "../../Components/McaHelmet";
+import Helmet from "../../Components/Helmet";
 import MusicasaHeader from "../../Components/McaHeader";
 import ArtistCoverPic from "../../Components/ArtistCoverPic";
 import ArtistSlider from "../../Components/ArtistSlider";
@@ -70,120 +70,120 @@ class ArtistTemplate extends Component{
         return(
             <Fragment>
                 <Helmet pageTitle="ArtistProfile" />
-                <div className="artist-container">
+                    <div className="artist-container">
                 
-                
-                {/* Start HeaderThree Area  */}
-                <MusicasaHeader />
-                {/* End HeaderThree Area  */}
+                    {/* Start HeaderThree Area  */}
+                    <MusicasaHeader />
+                    {/* End HeaderThree Area  */}
 
-                {/* Start Main Tag with Page Wrapper  */}
-                <main className="page-wrapper">
+                    {/* Start Main Tag with Page Wrapper  */}
+                    <main className="page-wrapper">
 
-                    <ArtistCoverPic />
+                        <ArtistCoverPic />
 
-                    {/* Start Bio Header (based on Portfolio Details) */}
-                    <div id="bio-area-container" className="rn-portfolio-details">
-                        <div className="container-lg">
-                            <div className="row">
-                                <div className="col-12 col-md-12 col-lg-4 col-lg-4 left-area">
-                                    <div className="profile-pic">
-                                        <img src="assets/images-mca/artists/artist-profile-pic.jpg" className="clip-path-circle-01"/>
+                        {/* Start Bio Header (based on Portfolio Details) */}
+                        <div id="bio-area-container" className="rn-portfolio-details">
+                            <div className="container-lg">
+                                <div className="row">
+                                    <div className="col-12 col-md-12 col-lg-4 col-lg-4 left-area">
+                                        <div className="profile-pic">
+                                            <img src="assets/images-mca/artists/artist-profile-pic.jpg" className="clip-path-circle-01"/>
+                                        </div>
+                                        <div className="membership-date">
+                                        <FaRegCheckCircle className="membership-date-icon" />Member since 2019
+                                        
+                                        
+                                        <i class="fas fa-badge-check"></i>
+                                        </div>
+                                        <div className="social-media-links">
+                                            <ul className="social-share-profile-bio rn-md-size d-flex justify-content-start liststyle">
+                                                {SocialShare.map((val , i) => (
+                                                    <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                        
                                     </div>
-                                    <div className="membership-date">
-                                    <FaRegCheckCircle className="membership-date-icon" />Member since 2019
-                                    
-                                    
-                                    <i class="fas fa-badge-check"></i>
-                                    </div>
-                                    <div className="social-media-links">
-                                        <ul className="social-share-profile-bio rn-md-size d-flex justify-content-start liststyle">
-                                            {SocialShare.map((val , i) => (
-                                                <li key={i}><a href={`${val.link}`}>{val.Social}</a></li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                    
-                                </div>
 
-                                <div className="col-12 col-md-12 col-lg-8 col-lg-8 right-area">
-                                    <h1>Nicky Stefan</h1>
-                                    <div className="snippet"><h3>A talented jazz singer, Stefan has been fusing jazz and Latino sounds since lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3></div>
-                                    <div className="row genre-and-city ">
-                                        <div className="col-12 col-md-6 block-areas"><span className="label">Genres:</span> Jazz, Blues, Soul… More +</div>
-                                        <div className="col-12 col-md-6 block-areas"><span className="label">Location: </span>Miami, Florida</div>
-                                    </div>                                                
+                                    <div className="col-12 col-md-12 col-lg-8 col-lg-8 right-area">
+                                        <h1>Nicky Stefan</h1>
+                                        <div className="snippet"><h3>A talented jazz singer, Stefan has been fusing jazz and Latino sounds since lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3></div>
+                                        <div className="row genre-and-city ">
+                                            <div className="col-12 col-md-6 block-areas"><span className="label">Genres:</span> Jazz, Blues, Soul… More +</div>
+                                            <div className="col-12 col-md-6 block-areas"><span className="label">Location: </span>Miami, Florida</div>
+                                        </div>                                                
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    {/* End Bio Header (based on Portfolio Details) */}
+                        {/* End Bio Header (based on Portfolio Details) */}
 
-                
+                    
 
 
-                    {/* Start About Area */}
-                    <div id="about" className="about-area mca-gradient-01">
-                        <div className="container-xl container-mca-wider">
-                            <div className="row">
-                                <div className="col-lg-4">
-                                    <div className="about-container mca-container-radius">
-                                        <h3 className="pink-text">About the Artist</h3>
-                                        <p className="description">Nicky Stefan, an Ecuadorian urban pop singer whose current country of residence is the USA and has lived and graduated as a singing teacher and professional singer in Moscow, Russia. Nicky Stefan participated in several international competitions, such as La Voz Russia, New Wave Lithuania, and La Voz Ecuador.  
-                                        </p>
+                        {/* Start About Area */}
+                        <div id="about" className="about-area mca-gradient-01">
+                            <div className="container-xl container-mca-wider">
+                                <div className="row">
+                                    <div className="col-lg-4">
+                                        <div className="about-container mca-container-radius">
+                                            <h3 className="pink-text">About the Artist</h3>
+                                            <p className="description">Nicky Stefan, an Ecuadorian urban pop singer whose current country of residence is the USA and has lived and graduated as a singing teacher and professional singer in Moscow, Russia. Nicky Stefan participated in several international competitions, such as La Voz Russia, New Wave Lithuania, and La Voz Ecuador.  
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="col-lg-8">
-                                    {/* Start SliderTwo, from slider component  */}
-                                    <ArtistSlider />
-                                    {/* End  SliderTwo, from slider component  */}
+                                    <div className="col-lg-8">
+                                        {/* Start SliderTwo, from slider component  */}
+                                        <ArtistSlider />
+                                        {/* End  SliderTwo, from slider component  */}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    {/* End About Area */}
+                        {/* End About Area */}
 
-                    {/* Start VideoPopup Area */}
-                    <ArtistVideo />
-                    {/* End VideoPopup Area */}
+                        {/* Start VideoPopup Area */}
+                        <ArtistVideo />
+                        {/* End VideoPopup Area */}
 
-                    {/* Start Concert Cards inside Parallax (based on Blog Area in Startup) */}
-                    <Parallax className="concerts-section rn-blog-area rn-testimonial-light" strength={700} data-black-overlay="6">
-                        <div className="container-xl container-mca-wider">
-                            <div className="row">
-                                <div className="col-lg-12">
-                                    <div className="section-title service-style--2 text-center mt--40 mb--80">
-                                        <h2>Concerts</h2>
+                        {/* Start Concert Cards inside Parallax (based on Blog Area in Startup) */}
+                        <Parallax className="concerts-section rn-blog-area rn-testimonial-light" strength={700} data-black-overlay="6">
+                            <div className="container-xl container-mca-wider">
+                                <div className="row">
+                                    <div className="col-lg-12">
+                                        <div className="section-title service-style--2 text-center mt--40 mb--80">
+                                            <h2>Concerts</h2>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* Start Concert Card Grid (based on BlogList) */}
+                                {/* Start Concert Card Grid (based on BlogList) */}
 
-                            <ConcertCardGrid01 />
+                                <ConcertCardGrid01 />
+                                
+                                {/* End Concert Card Grid (based on BlogList) */}
+                            </div> 
                             
-                            {/* End Concert Card Grid (based on BlogList) */}
-                        </div> 
-                        
-                    </Parallax>
-                    {/* End Concert Cards inside Parallax (based on Blog Area in Startup) */}
+                        </Parallax>
+                        {/* End Concert Cards inside Parallax (based on Blog Area in Startup) */}
 
 
-                </main>
-                {/* End Main Tag with Page Wrapper  */}
+                    </main>
+                    {/* End Main Tag with Page Wrapper  */}
 
-                {/* Start Back To Top */}
-                <div className="backto-top">
-                    <ScrollToTop showUnder={160}>
-                        <FiChevronUp />
-                    </ScrollToTop>
-                </div>
-                {/* End Back To Top */}
 
-                 {/* Start Footer Style based on FooterTwo  */}
-                 <FooterMusicasa />
-                {/* End  Footer Style based on FooterTwo  */}
-                
+
+                    {/* Start Footer Style based on FooterTwo  */}
+                    <FooterMusicasa />
+                    {/* End  Footer Style based on FooterTwo  */}
+
+                    {/* Start Back To Top */}
+                    <div className="backto-top">
+                        <ScrollToTop showUnder={160}>
+                            <FiChevronUp />
+                        </ScrollToTop>
+                    </div>
+                    {/* End Back To Top */}             
 
                 </div>
 

@@ -33,10 +33,7 @@ ul.mainmenu>li>ul.submenu {
 }
 
 
-.icon-profile img{
-    height: 26px;
-    margin-right: 8px;
-}
+
 
 /*
 .icon-profile i{
@@ -118,5 +115,51 @@ h1, .h1, h2, .h2{
 
 */
 
+.link-with-icon-flex {
+    display: flex;
+    align-items: center;
+}
 
+.icon-user-profile {
+    mask: url(/assets/svg/icon-user-profile.svg);
+    margin-right: 6px;
+  }
 
+  .nav-icon{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color:$theme-color-2;
+    mask-size: cover;
+  }
+  .nav-icon:hover,
+  .nav-icon:focus {
+    background-image: linear-gradient(to bottom, $theme-color , $theme-color-3, $theme-color-2);
+  }
+  
+
+  /*
+
+.icon-profile img{
+    height: 26px;
+    margin-right: 8px;
+    fill: green;
+}
+
+.icon-for-nav{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-size:  cover;
+}
+
+svg:hover{
+    fill: orange;
+}
+
+.icon-user-profile{
+
+        mask: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/icon-bike-black.svg);
+
+}
+*/

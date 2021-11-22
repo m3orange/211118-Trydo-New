@@ -75,23 +75,22 @@ class MusicasaHeader extends Component{
                     </div>
                     <div className="header-right">
                         <nav className="mainmenunav mainmenunav-musicasa d-lg-block ml--50">
-
                             <ul className="mainmenu mainmenu-musicasa">
                                 <li><a href="/login">Home</a></li>
                                 <li><a href="https://www.musicasaa.com/concerts">Concerts</a></li>
                                 <li className="has-droupdown">
-                                    <i className="icon-profile"><img src="assets/svg/icon-profile-gradient.svg" /></i>
-                                    <Link to="#">My Profile</Link>
+                                    <div className="link-with-icon-flex">
+                                        <div className="nav-icon icon-user-profile"></div>
+                                        <Link to="#">My Profile</Link>
+                                    </div>
+
                                     <ul className="submenu submenu-musicasa">
-                                        <li><Link to="#">Artists</Link></li>
+                                        <li><Link to="/artist-profile">Artists</Link></li>
                                         <li><Link to="#">Hosts</Link></li>
                                     </ul>
                                 </li>
-                                <li><a href="/main-demo" >Demos</a></li>
-                                <li><a href="/documentation/index.html">Doc</a></li>
+                                <li><a href="/main-demo">Demos</a></li>
                             </ul>
-
-                            
                         </nav>
                         {/* Start Humberger Menu  */}
                         <div className="humberger-menu d-block d-lg-none pl--20">

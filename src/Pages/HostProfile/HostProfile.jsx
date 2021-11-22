@@ -8,7 +8,7 @@ import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn} from "react-icons/fa
 
 
 import MusicasaHeader from "../../Components/McaHeader";
-import Helmet from "../../Components/McaHelmet";
+import Helmet from "../../Components/Helmet";
 import ArtistVideo from "../../Components/McaArtistVideo";
 import BlogList from "../../Components/McaBlogList";
 import FooterTwo from "../../Components/McaFooterTwo";
