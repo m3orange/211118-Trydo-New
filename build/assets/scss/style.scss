@@ -1,0 +1,153 @@
+/*********************************************************************************
+
+	Adjusted by M3 211118_1906
+
+	Template Name: Trydo React Degital Agency Template
+	Note: This is style css.
+
+**********************************************************************************/
+
+/**************************************************************
+	
+	STYLESHEET INDEXING
+	|
+	|
+	|___ Default Styles
+	|	|
+	|	|___ variables
+	|	|___ mixins
+	|	|___ reset
+	|	|___ typography
+	|	|___ extend
+	|	|___ animations
+	|	|___ shortcode
+	|	|___ spacing
+	|	|___ header
+	|	|___ mainmenu
+	|	|___ blog 
+	|	|___ blog-details 
+	|
+	|___Inner Styles
+	|	|___ breadcrump 
+	|	|___ section-title 
+	|	|___ button
+	|	|___ pagination
+	|	|___ socialicon
+	|	|___ footer
+	|
+	|___Elements Styles
+	|	|___ portfolio 
+	|	|___ service 
+	|	|___ slider 
+	|	|___ counterup 
+	|	|___ testimonial 
+	|	|___ brand 
+	|	|___ team 
+	|	|___ callto-action 
+	|	|___ tab 
+	|	|___ accordion 
+	|	|___ list 
+	|	|___ contact 
+	|
+	|___Template Styles
+	|	|___ about 
+	|	|___ portfolio-details
+	|	|___ service-details
+	|	|___ preview
+	|
+	|
+	|___ END STYLESHEET INDEXING
+
+***************************************************************/
+@import '_musicasa-variables'; /* M3 This has to stay at the top so all dependencies can keep working. */
+
+/**************************************
+    Default Styles
+***************************************/
+/*
+@import 'default/variables';
+@import 'default/typography';
+@import 'default/extend';
+*/
+@import 'default/mixins';
+@import 'default/reset';
+
+@import 'default/animations';
+@import 'default/shortcode';
+@import 'default/spacing';
+@import 'default/header';
+@import 'default/mainmenu';
+/*
+@import 'default/blog';
+*/
+@import 'default/blog-details';
+@import 'default/breadcrump';
+@import 'default/section-title';
+@import 'default/button';
+@import 'default/pagination';
+@import 'default/socialicon';
+@import 'default/footer';
+
+
+
+/**************************************
+    Elements Styles
+***************************************/
+
+@import 'elements/portfolio';
+@import 'elements/service';
+@import 'elements/slider';
+@import 'elements/counterup';
+@import 'elements/testimonial';
+@import 'elements/brand';
+@import 'elements/team';
+@import 'elements/callto-action';
+@import 'elements/tab';
+@import 'elements/accordion';
+@import 'elements/list';
+@import 'elements/contact';
+@import 'elements/progress';
+@import 'elements/column';
+@import 'elements/404';
+@import 'elements/pricing';
+
+
+
+/**************************************
+    Template Styles
+***************************************/
+
+@import 'template/about';
+@import 'template/portfolio-details';
+@import 'template/service-details';
+@import 'template/dark-version';
+@import 'template/preview';
+
+/**************************************
+    Musicasa Styles - Created by M3
+
+
+	@import '_musicasa-global-disabled.scss';
+	
+
+
+***************************************/
+
+
+@import '_artist-profile.scss';
+@import '_host-profile.scss';
+
+@import '_musicasa-extend';
+@import '_musicasa-typography';
+
+@import '_musicasa-global.scss';
+@import '_musicasa-recipes';
+
+@import '_concert-cards.scss'; /* Adaptation of blog.scss for concert cards */
+@import '_musicasa-socialicon.scss';
+
+@import '_musicasa-footer.scss';
+
+@import '_login-homepage.scss';
+@import '_musicasa-custom';
+@import '_musicasa-overwrites';

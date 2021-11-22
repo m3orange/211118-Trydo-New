@@ -1,0 +1,65 @@
+/*--------------------------
+    Color Darker Version  
+----------------------------*/
+
+
+.mca-gradient-right{
+    background-image: linear-gradient(to right, $theme-color , $theme-color-3, $theme-color-2);
+}
+
+.mca-gradient-bottom{
+    background-image: linear-gradient(to bottom, $theme-color , $theme-color-3, $theme-color-2);
+}
+
+
+
+/* Emulated from public/assets/scss/default/_shortcode.scss */
+
+@for $i from 01 through 99 {
+    .mca-bg-image-0#{$i} {
+        background-image: url(/assets/images-mca/bg/mca-bg-image-0#{$i}.jpg) !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@for $i from 01 through 99 {
+    .mca-bg-image-header-0#{$i} {
+        background-image: url(/assets/images-mca/bg/mca-bg-image-header-0#{$i}.png) !important;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+@for $i from 01 through 99 {
+    .mca-bg-image-parallax-0#{$i} {
+        background-image: url(/assets/images-mca/bg/mca-bg-image-parallax-0#{$i}.jpg) !important;
+
+    }
+}
+
+
+
+
+[data-overlay],
+[data-mca-overlay],
+[data-mca-overlay-gradient]{
+    position: relative;
+    z-index: 1;
+}
+
+
+[data-mca-overlay-gradient] {
+    background-image: linear-gradient(to right, $theme-color , $theme-color-3, $theme-color-2);
+}
+
+@for $i from 1 through 10 {
+    [data-mca-overlay-gradient="#{$i}"]{
+        opacity: #{$i * 0.10};
+    }
+}
+
+
+ 

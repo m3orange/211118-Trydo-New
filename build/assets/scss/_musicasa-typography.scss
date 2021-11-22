@@ -1,0 +1,310 @@
+/**
+ * Typography
+ */
+
+
+//===== Line Height =====//
+$body-line-height: 1.714286;
+
+//==== Font size =====//
+$body-font-size: 16px;
+
+//=== Changed to em proportions =====//
+$h1: 4.25em;
+$h2: 4em;
+$h3: 3.375em;
+$h4: 1.5em;
+$h5: 1.25em;
+$h6: 1.125em;
+
+
+/* Previously formulated as:
+$h1: 64px;
+$h2: 54px;
+$h3: 24px;
+$h4: 20px;
+$h5: 18px;
+$h6: 16px;
+*/
+
+
+
+
+
+
+
+* {
+	box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+}
+html {
+	overflow: hidden;
+	overflow-y: auto;
+}
+body {
+	overflow: hidden;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $body-font;
+	color: $body-color;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+a {
+	transition: all 0.4s ease-in-out 0s;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+address, p, pre, blockquote, dl, dd, menu, ol, ul, table, caption,
+hr {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $heading-font;
+	line-height: 1.1em; /* M3 */
+	color: $heading-color;
+
+
+}
+
+h1, .h1 { 	font-size: $h1;    }
+h2, .h2 { 	font-size: $h2;    }
+h3, .h3 { 	font-size: $h3;    }
+h4, .h4 { 	font-size: $h4;    }
+h5, .h5 { 	font-size: $h5;    }
+h6, .h6 { 	font-size: $h6;    }
+
+@media #{$md-layout} {
+	h1, .h1 {
+		font-size: $h3;
+	}
+	
+	h2, .h2 {
+		font-size: $h3;
+	}
+
+	h3, .h3 {
+		font-size: $h4;
+	}
+}
+
+@media #{$sm-layout} {
+	h1, .h1 {
+		font-size: $h3;
+	}
+	
+	h2, .h2 {
+		font-size: $h3;
+	}
+	
+	h3, .h3 {
+		font-size: $h4;
+	}
+}
+
+@media #{$large-mobile} {
+	h1,
+	.h1 {
+		font-size: $h1 - 8;
+	}
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+	font-weight: 700;
+}
+h4,
+.h4,
+h5,
+.h5 {
+	font-weight: 600;
+}
+h6,
+.h6 {
+	font-weight: 500;
+}
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	outline: none;
+}
+a:visited {
+	color: inherit;
+}
+input,
+button,
+select,
+textarea {
+	background: transparent;
+	border: 1px solid $border-color;
+	transition: all 0.4s ease-out 0s;
+	color: $body-color;
+	&:focus,
+	&:active {
+		outline: none;
+		border-color: $theme-color;
+	}
+}
+input,
+select,
+textarea {
+	width: 100%;
+	font-size: 14px;
+}
+input,
+select {
+	height: 40px;
+	padding: 0 15px;
+}
+
+
+
+@font-face {
+    font-family: 'Austral_Slab_-_Rough_Thin';
+    src: url('/assets/fonts/Austral_Slab/Austral_Slab_-_Rough_Thin.woff2') format('woff2'),
+         url('/assets/fonts/Austral_Slab/Austral_Slab_-_Rough_Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Austral_Slab_-_Rough_Light';
+    src: url('/assets/fonts/Austral_Slab/Austral_Slab_-_Rough_Light.woff2') format('woff2'),
+         url('/assets/fonts/Austral_Slab/Austral_Slab_-_Rough_Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Austral_Slab_-_Rough_Regular';
+    src: url('/assets/fonts/Austral_Slab/Austral_Slab_-_Rough_Regular.woff2') format('woff2'),
+         url('/assets/fonts/Austral_Slab/Austral_Slab_-_Rough_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Austral_Slab_-_Stamp_Thin';
+    src: url('/assets/fonts/Austral_Slab/Austral_Slab_-_Stamp_Thin.woff2') format('woff2'),
+         url('/assets/fonts/Austral_Slab/Austral_Slab_-_Stamp_Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 
+Austral Stamp Light 
+For some reason, the OTF for austral_slabstamp_light
+wouldn't yield a woff file. So not including it.
+*/
+
+
+@font-face {
+    font-family: 'Austral_Slab_-_Stamp_Regular';
+    src: url('/assets/fonts/Austral_Slab/Austral_Slab_-_Stamp_Regular.woff2') format('woff2'),
+         url('/assets/fonts/Austral_Slab/Austral_Slab_-_Stamp_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*
+Causten
+Embedding only:
+Light (and oblique)
+Regular (and oblique)
+Medium (and oblique)
+Bold (and oblique)
+*/
+
+
+
+@font-face {
+    font-family: 'Causten_Light';
+    src: url('/assets/fonts/Causten/Causten_Light.woff2') format('woff2'),
+         url('/assets/fonts/Causten/Causten_Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Causten_Light_Oblique';
+    src: url('/assets/fonts/Causten/Causten_Light_Oblique.woff2') format('woff2'),
+         url('/assets/fonts/Causten/Causten_Light_Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Causten_Regular';
+    src: url('/assets/fonts/Causten/Causten_Regular.woff2') format('woff2'),
+         url('/assets/fonts/Causten/Causten_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Causten_Regular_Oblique';
+    src: url('/assets/fonts/Causten/Causten_Regular_Oblique.woff2') format('woff2'),
+         url('/assets/fonts/Causten/Causten_Regular_Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Causten_Medium';
+    src: url('/assets/fonts/Causten/Causten_Medium.woff2') format('woff2'),
+         url('/assets/fonts/Causten/Causten_Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Causten_Medium_Oblique';
+    src: url('/assets/fonts/Causten/Causten_Medium_Oblique.woff2') format('woff2'),
+         url('/assets/fonts/Causten/Causten_Medium_Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Causten_Bold';
+    src: url('/assets/fonts/Causten/Causten_Bold.woff2') format('woff2'),
+         url('/assets/fonts/Causten/Causten_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Causten_Bold_Oblique';
+    src: url('/assets/fonts/Causten/Causten_Bold_Oblique.woff2') format('woff2'),
+         url('/assets/fonts/Causten/Causten_Bold_Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

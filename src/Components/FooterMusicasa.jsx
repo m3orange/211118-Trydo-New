@@ -18,7 +18,7 @@ const FooterMusicasa = () => {
                         <div className="inner">
                             <div className="logo text-center text-sm-left mb_sm--20 footer-mca-logo">
                                 <a href="/login">
-                                    <img src="/assets/images-mca/logo/logo-white-2x.png" alt="Logo images"/>
+                                    <img src="/assets/images-mca/logo/logo-white.png" alt="Musicasa"/>
                                 </a>
                                 <div className="footer-miami-love">Made with 💛 in Miami.</div>
                             </div>

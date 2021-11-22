@@ -1,0 +1,145 @@
+/*--------------------------
+    Musicasa > Footer
+----------------------------*/
+
+
+
+.footer-musicasa{
+    padding: 100px 0;
+
+    @media #{$sm-layout} {
+        padding: 50px 0;
+    }
+
+    @media #{$md-layout} {
+        padding: 90px 0;
+    }
+
+}
+
+.footer-home-variation{
+    padding: 40px 0;
+    /*
+    position: fixed;
+    bottom: 0px;
+    z-index: 5;
+    width: 100%;
+    */
+}
+
+
+
+
+/*
+
+#home-footer-variation {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+#home .page-wrapper{
+    height: 100vh;
+    background-color: black;
+}
+
+#home body{
+    background-color: black;
+}
+*/
+
+.footer-mca-logo img{
+    max-height: 50px;
+}
+
+.footer-miami-love{
+    height: 30px;
+    color: rgba(255,255,255,0.8);
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
+
+.footer-email{
+    margin-top: 8px;
+
+}
+.footer-email a{
+    color: $theme-color-2;
+    text-decoration: underline;
+}
+
+.footer-copyright-links{
+    color: rgba(255,255,255,0.9);
+    font-size: 14px;
+    opacity: 0.8;
+
+    @media #{$sm-layout} {
+        position: static;
+        bottom: 0;
+        padding-top: 15px;
+    }
+
+    @media #{$md-layout} {
+        position: static;
+        bottom: 0;
+        padding-top: 33px;
+    }
+
+}
+
+.footer-copyright-links a{
+    text-decoration: underline;
+    color: rgba(255,255,255,0.65);
+}
+
+.footer-copyright-links a:hover{
+    color: rgba(255,255,255,1);
+}
+
+.footer-mca-social-icons ul.social-share li{
+    @media #{$md-layout} {
+        margin: 0 6px 6px 6px;
+    }
+
+        a {
+            width: 45px;
+            height: 45px;
+            line-height: 40px;
+            font-size: 1.1em; /* M3 */
+
+        }
+
+}
+
+.footer-mca-social-icons{
+
+    @media #{$sm-layout} {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    @media #{$md-layout} {
+
+    }
+}
+
+.footer-style-2{
+    /* M3
+    background-image: linear-gradient(to bottom, $theme-color , $theme-color-3, $theme-color-2);
+    */
+    background-color: #222222;
+}
+
+.backto-top>div {
+    background-color: rgba(253,187,48,1);
+
+}
+.backto-top svg {
+    color: #000;
+    color: $body-color;
+    margin-bottom: 4px;
+}
+
+.backto-top>div:hover{
+    background-color: rgba(253,187,48,1.0);
+}

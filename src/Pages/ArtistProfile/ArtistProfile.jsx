@@ -156,11 +156,22 @@ class ArtistTemplate extends Component{
                                         </div>
                                     </div>
                                 </div>
+                                <div className="row">
+                                    <div className="col-lg-12">
+                                        <ul class="nav justify-content-center">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" aria-current="page" href="#">Upcoming</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Previous</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>     
+                            
 
                                 {/* Start Concert Card Grid (based on BlogList) */}
-
                                 <ConcertCardGrid01 />
-                                
                                 {/* End Concert Card Grid (based on BlogList) */}
                             </div> 
                             

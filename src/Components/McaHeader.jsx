@@ -78,18 +78,9 @@ class MusicasaHeader extends Component{
                             <ul className="mainmenu mainmenu-musicasa">
                                 <li><a href="/login">Home</a></li>
                                 <li><a href="https://www.musicasaa.com/concerts">Concerts</a></li>
-                                <li className="has-droupdown">
-                                    <div className="link-with-icon-flex">
-                                        <div className="nav-icon icon-user-profile"></div>
-                                        <Link to="#">My Profile</Link>
-                                    </div>
+                                <li><a href="https://musicasalive.com/"><div className="nav-icon icon-user-profile"></div>Log In</a></li>
+                                <li><a href="/artist-profile"><div className="nav-icon icon-user-profile"></div>My Profile</a></li>
 
-                                    <ul className="submenu submenu-musicasa">
-                                        <li><Link to="/artist-profile">Artists</Link></li>
-                                        <li><Link to="#">Hosts</Link></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/main-demo">Demos</a></li>
                             </ul>
                         </nav>
                         {/* Start Humberger Menu  */}

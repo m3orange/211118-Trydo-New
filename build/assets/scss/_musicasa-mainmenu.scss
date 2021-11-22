@@ -1,0 +1,88 @@
+/*====================
+Mainmenu Area - Musicasa
+=====================*/
+
+
+.mainmenunav-musicasa {
+    ul {
+        &.mainmenu-musicasa {
+            display: flex;
+            justify-content: flex-end;
+            @extend %liststyle;
+            flex-wrap: wrap;
+            > li {
+                margin: 0 15px;
+                position: relative;
+                > a {
+                    @extend %transition;
+                    color: $nav-color;
+                    font-size: 15px;
+                    font-weight: 500;
+                    padding: 20px 0;
+                    display: inline-block;
+                }
+                > ul {
+                    &.submenu-musicasa {
+                        @extend %liststyle;
+
+                        min-width: 220px;
+
+                        height: auto;
+                        position: absolute;
+                        top: 100%;
+                        /*left: 0px;  M3 211120_2121 - Was left */
+                        right: 0px;
+                        z-index: 90;
+                        opacity: 0;
+                        visibility: hidden;
+                        background-color: #fff;
+                        box-shadow: 0 0 35px rgba(0,0,0,0.1);
+                        text-align: right;
+                        @extend %transition;
+                        padding: 20px 10px;
+                        border-radius: 6px;
+                        li {
+                            a {
+                                font-size: 16px;
+                                font-weight: 500;
+                                padding: 8px 20px;
+                                font-size: 14px;
+                                display: block;
+                                color: #1f1f25;
+                                margin: 0 10px;
+                                border-radius: 3px;
+                                @extend %transition;
+                            }
+                            &:hover {
+                                a {
+                                    color: $theme-color;
+                                    background: rgba(249, 0, 77, 0.07);
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    > ul {
+                        &.submenu {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                &:hover {
+                    > a {
+                        color: $theme-color;
+                    }
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

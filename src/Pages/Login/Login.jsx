@@ -9,24 +9,12 @@ import MusicasaHeader from "../../Components/McaHeader";
 
 import BlogContent from "../../elements/blog/BlogContent";
 import ModalVideo from 'react-modal-video';
-import { videoTagString, VideoTag } from 'react-video-tag';
 
-videoTagString({ src: 'https://www.youtube.com/watch?v=dXZbhZugU1A', poster: '/assets/images/bg/bg-image-24.jpg' })
 
 
 
 /* This page template – Based on Startup Agency - Fullwidth video view */
 
-const SlideList = [
-    {
-        textPosition: 'text-left',
-        category: '',
-        title: '',
-        description: 'There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.',
-        buttonText: 'Contact Us',
-        buttonLink: '/contact'
-    }
-]
 
 const SocialShare = [
     {Social: <FaInstagram /> , link: 'https://www.instagram.com/musicasaa/'},
@@ -52,23 +40,22 @@ class FullwidthLogin extends Component{
         return(
             <Fragment>
                 <Helmet pageTitle="Login" />
-                <div className="login-container" styl="background-color: black;">
+                <div className="login-container">
 
                     {/* Start HeaderThree Area  */}
                     <MusicasaHeader />
                     {/* End HeaderThree Area  */}
 
                     {/* Start Slider Area   */}
-                    <div className="slider-wrapper">
+                    <div className="slider-wrapper mca-bg-image-01" data-black-overlay="5">
+
                         {/* Start Single Slide */}
-                        {SlideList.map((value , index) => (
-                            <div className="slide slide-style-2 slider-video-bg d-flex align-items-center justify-content-center" key={index} data-black-overlay="6">
+                            <div className="slide slide-style-2 slider-video-bg d-flex align-items-center justify-content-center" >
 
                                 <div className="video-background">
-                                    <VideoTag autoPlay={`${true}`} muted={`${true}`} playsInline={`${true}`} loop={`${true}`}  src={`${"/assets/video/211116-1517-alemor.mp4"}`} poster={`${"/assets/images/bg/bg-image-24.jpg"}`} />
+
                                 </div>
                             </div>
-                        ))}
                         {/* End Single Slide */}
 
                         

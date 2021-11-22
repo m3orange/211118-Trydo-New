@@ -90,7 +90,7 @@ Mainmenu Area
 .humberger-menu{
     span{
         &.text-white{
-            color: #c6c9d8 !important;
+            color: $theme-color-2!important;
             
         }
     }
@@ -141,7 +141,7 @@ Mainmenu Area
         }
     }
 }
-
+/*
 
 @media #{$lg-layout}{
     .header-style-two .humberger-menu span.text-white {
@@ -163,7 +163,7 @@ Mainmenu Area
 
 
 
-
+*/
 
 
 
