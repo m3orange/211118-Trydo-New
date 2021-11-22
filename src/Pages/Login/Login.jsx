@@ -6,13 +6,12 @@ import {FaTwitter ,FaInstagram ,FaFacebookF , FaYoutube, FaSpotify} from "react-
 import Helmet from "../../Components/Helmet";
 
 import MusicasaHeader from "../../Components/McaHeader";
-import FooterMusicasa from "../../Components/FooterMusicasa";
 
 import BlogContent from "../../elements/blog/BlogContent";
 import ModalVideo from 'react-modal-video';
 import { videoTagString, VideoTag } from 'react-video-tag';
 
-videoTagString({ src: '/assets/images/service/video.mp4', poster: '/assets/images/bg/bg-image-24.jpg' })
+videoTagString({ src: 'https://www.youtube.com/watch?v=dXZbhZugU1A', poster: '/assets/images/bg/bg-image-24.jpg' })
 
 
 
@@ -22,7 +21,7 @@ const SlideList = [
     {
         textPosition: 'text-left',
         category: '',
-        title: 'Welcome Video Studio',
+        title: '',
         description: 'There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration.',
         buttonText: 'Contact Us',
         buttonLink: '/contact'
@@ -64,25 +63,9 @@ class FullwidthLogin extends Component{
                         {/* Start Single Slide */}
                         {SlideList.map((value , index) => (
                             <div className="slide slide-style-2 slider-video-bg d-flex align-items-center justify-content-center" key={index} data-black-overlay="6">
-                                <div className="container">
-                                    <div className="row align-items-center">
-                                        <div className="col-lg-8">
-                                            <div className={`inner ${value.textPosition}`}>
-                                                {value.category ? <span>{value.category}</span> : ''}
-                                                {value.title ? <h1 className="title">{value.title}</h1> : ''}
-                                                {value.description ? <p className="description">{value.description}</p> : ''}
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4">
-                                            <div className="video-inner">
-                                                <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='ZOoVOfieAF8' onClose={() => this.setState({isOpen: false})} />
-                                                <button className="video-popup theme-color" onClick={this.openModal}><span className="play-icon"></span></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div className="video-background">
-                                    <VideoTag autoPlay={`${true}`} muted={`${true}`} playsInline={`${true}`} loop={`${true}`}  src={`${"/assets/images/service/video.mp4"}`} poster={`${"/assets/images/bg/bg-image-24.jpg"}`} />
+                                    <VideoTag autoPlay={`${true}`} muted={`${true}`} playsInline={`${true}`} loop={`${true}`}  src={`${"/assets/video/211116-1517-alemor.mp4"}`} poster={`${"/assets/images/bg/bg-image-24.jpg"}`} />
                                 </div>
                             </div>
                         ))}
@@ -91,8 +74,6 @@ class FullwidthLogin extends Component{
                         
                     </div>
                     {/* End Slider Area   */}
-
-
 
 
                     {/* Start Footer Style based on FooterTwo  */}
