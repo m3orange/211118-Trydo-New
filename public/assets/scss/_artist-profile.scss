@@ -1,6 +1,7 @@
 /*--------------------------
     Musicasa > Artist Profile
 ----------------------------*/
+
 .artist-container{
     background-color: #FFFFFF;
 }
@@ -13,11 +14,12 @@
 #about {
     padding: 200px 0;
 
+    @media #{$sm-layout}{
+        padding: 130px 0;
+  
+    }
 }
 
-#concert-section{
-    /* Undefined */
-}
 
 /* --------- Header Cover Pic Band ---------- */
 
@@ -30,15 +32,48 @@
     background-color: rgba(0,0,0,1);
     height: 60vh;
 
+        @media #{$md-layout} {
+            height: 45vh;
+            background-image: url(/assets/images-mca/artists/artist-cover-pic-mob.jpg);
+            background-repeat: no-repeat;
+            background-size: 80%;
+            background-position-x: 50%;
+            background-position-y: 20%;
+        }
 
         @media #{$sm-layout} {
             height: 55vh;
             background-image: url(/assets/images-mca/artists/artist-cover-pic-mob.jpg);
             background-repeat: no-repeat;
-            background-size: cover;
-            background-position: bottom center;
+            background-size: 80%;
+            background-position-x: 50%;
+            background-position-y: 20%;
         }
 }
+
+.profile-pic{
+    margin: 0px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 4px solid #FFFFFF;
+
+    box-shadow: 0px 2px 6x 4px rgba(0,0,0,0.4);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+        -webkit-box-shadow: 0px 2px 6px 4px rgba(0,0,0,0.4);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow:    0px 2px 6px 4px rgba(0,0,0,0.4);  /* Firefox 3.5 - 3.6 */
+
+
+    @media #{$md-layout} {
+        border: 4px solid #FFFFFF;
+
+    }
+
+    @media #{$sm-layout} {
+        border: 4px solid #FFFFFF;
+
+    }
+}
+
 
 
 
@@ -50,10 +85,11 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
-    margin-top: -35%;
+    margin-top: -25%;
     z-index: 10;
 
     @media #{$md-layout} {
+        margin-top: -35%;
         flex-wrap: wrap;
         justify-content: center;
 
@@ -80,28 +116,14 @@
 
 }
 
-.profile-pic{
-    margin: 0px;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: 4px solid white;
+/*
+.membership-date::before{
+    content:url('/assets/svg/icon-membership.svg'); 
+    max-height: 50px;
 
-    box-shadow: 0px 2px 6x 4px rgba(0,0,0,0.4);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-        -webkit-box-shadow: 0px 2px 6px 4px rgba(0,0,0,0.4);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-        -moz-box-shadow:    0px 2px 6px 4px rgba(0,0,0,0.4);  /* Firefox 3.5 - 3.6 */
-
-
-    @media #{$md-layout} {
-        border: 4px solid red;
-
-    }
-
-    @media #{$sm-layout} {
-        border: 4px solid blue;
-
-    }
 }
+*/
+
 
 
 
@@ -145,80 +167,9 @@
     font-weight: 600;
 }
 
-
-
-.snippet h3{
-    font-size: 2.5em;
+.membership-date-icon{
+    margin-right: 10px;
 }
-
-.genre-and-city{
-    font-family: $body-font;
-    font-size: 1.2em;
-    margin-top: 20px;
-
-}
-
-.genre-and-city h5{
-    color: $body-color;
-    font-family: $body-font;
-    margin-bottom: 6px;
-}
-
-.block-genres, .block-location{
-    margin-top:20px;
-    margin-bottom: 20px;
-}
-
-.artist-container h1,
-.artist-container h2,
-.artist-container h3,
-.artist-container h4,
-.genre-and-city{
-    color: $body-color;
-    line-height: 1.2em;
-    font-weight: 400;
-} 
-
-
-.profile-pic{
-    margin: 0px;
-
-    @media #{$md-layout} {
-        border: 4px solid red;
-    }
-
-    @media #{$sm-layout} {
-        border: 4px solid blue;
-    }
-}
-
-
-
-.artist-container h1{
-    font-size: 4em;
-    border-bottom: 2px solid red;
-
-    @media #{$md-layout} {
-        font-size: 3em;
-        border-bottom: 2px solid orange;
-    }
-
-    @media #{$sm-layout} {
-        font-size: 3em;
-        border-bottom: 2px solid yellow;
-    }
-}
-
-
-
-/*
-$h1: 4.25em;
-$h2: 4em;
-$h3: 3.375em;
-$h4: 1.5em;
-$h5: 1.25em;
-$h6: 1.125em;
-*/
 
 
 /* --------- About & Slider  ---------- */
@@ -227,16 +178,14 @@ $h6: 1.125em;
 .about-container {
     background-color: #FFFFFF;
     padding: 40px;
-    border-radius: 10px;
 }
 
 .slider-container{
     min-height: 50vh;
 }
 
-.about-container h3{
-    color: $theme-color;
-}
+
+
 
 
 
@@ -258,11 +207,78 @@ $h6: 1.125em;
     background-repeat: no-repeat;
     background-position: top center;
  
-         @media #{$md-layout} {
+         @media #{$sm-layout} {
              background-image: url(/assets/images-mca/bg/mca-image-08c.jpg);
+             padding: 130px 0px;
          }
          @media #{$large-mobile} {
              background-image: url(/assets/images-mca/bg/mca-bg-image-03-mobile-2x.jpg);
          }
  }
- 
+
+
+/* ---- Overriding text sizes ------- */
+
+ #bio-area-container h1{
+    font-size: 4em;
+    /* border-bottom: 2px solid red;*/
+
+    @media #{$sm-layout} {
+        font-size: 2.8em!important;
+    }
+
+
+}
+
+.snippet h3{
+    font-size: 2.3em;
+
+    @media #{$sm-layout} {
+    font-size: 1.8em;
+    }
+}
+
+
+.block-genres, .block-location{
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+
+.genre-and-city{
+    font-family: $body-font;
+    font-size: 1.2em;
+    margin-top: 20px;
+
+}
+
+.block-areas .label{
+    font-family: $body-font-medium;
+    font-weight: 700;
+    margin-right: 6px;
+
+}
+
+.genre-and-city h5{
+    color: $body-color;
+    font-family: $heading-font;
+    margin-bottom: 6px;
+}
+
+
+
+.artist-container h1,
+.artist-container h2,
+.artist-container h3,
+.artist-container h4,
+.genre-and-city{
+    color: $body-color;
+    /*line-height: 1.2em;*/
+    font-weight: 400;
+} 
+
+.about-container h3{
+    color: $theme-color;
+}
+
+

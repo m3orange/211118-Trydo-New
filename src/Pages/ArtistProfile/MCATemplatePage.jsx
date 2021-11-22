@@ -1,9 +1,7 @@
 import React, { Component , Fragment } from "react";
 import {Link} from "react-router-dom";
 import { Parallax } from "react-parallax";
-import Scrollspy from 'react-scrollspy';
 import ScrollToTop from 'react-scroll-up';
-import Slider from "react-slick";
 import { FiChevronUp , FiX , FiMenu } from "react-icons/fi";
 import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn} from "react-icons/fa";
 
@@ -12,7 +10,7 @@ import MusicasaHeader from "../../Components/McaHeader";
 import Helmet from "../../Components/McaHelmet";
 import ArtistVideo from "../../Components/McaArtistVideo";
 import BlogList from "../../Components/McaBlogList";
-import FooterTwo from "../../Components/McaFooterTwo";
+import FooterMusicasa from "../../Components/FooterMusicasa";
 
 import McaSliderHeaderBand from "../../Components/McaSliderHeaderBand";
 import BlogContent from "../../Components/McaBlogContent";
@@ -161,7 +159,7 @@ class MCATemplatePage extends Component{
                     {/* Start Concert Cards inside Parallax (based on Blog Area in Startup) */}
                     <Parallax className="rn-blog-area rn-testimonial-light" strength={700} data-black-overlay="7">
                         <div className="blog-area ptb--120" data-black-overlay="6">
-                            <div className="container">
+                            <div className="container-mca-wider">
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="section-title service-style--2 text-center mb--30 mb_sm--0">
@@ -190,7 +188,7 @@ class MCATemplatePage extends Component{
                 </div>
                 {/* End Back To Top */}
                  {/* Start Footer Style  */}
-                 <FooterTwo />
+                 <FooterMusicasa />
                 {/* End Footer Style  */}
                 
 

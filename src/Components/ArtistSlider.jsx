@@ -124,7 +124,7 @@ class ArtistSlider extends Component {
         <div className="slider-activation">
             <Slider className="rn-slick-dot dot-light" {...slideSlick}>
                 {SlideList.map((value , index) => (
-                    <div className={`slide slide-style-2 d-flex align-items-center justify-content-center bg_image ${value.bgImage} slider-container`} key={index} data-black-overlay="1">
+                    <div className={`slide slide-style-2 d-flex align-items-center justify-content-center bg_image ${value.bgImage} slider-container mca-container-radius`} key={index} data-black-overlay="1">
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-12">

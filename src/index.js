@@ -59,6 +59,8 @@ import PricingTable from "./blocks/PricingTable";
 import { BrowserRouter, Switch, Route  } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
+// Musicasa Blocks Layout
+import FooterMusicasa from './Components/FooterMusicasa';
 
 // Musicasa Pages
 import Login from './Pages/Login/Login';

@@ -6,7 +6,7 @@ Styles for concert cards, based on: Blog Styles
 
 .blog-style--1 {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     @extend %transition;
     overflow: hidden;
     border-radius: 15px;
@@ -54,8 +54,17 @@ Styles for concert cards, based on: Blog Styles
             bottom: 0;
         }
         @media #{$large-mobile} {
-            padding: 30px 20px;
+            padding: 30px 40px;
         }
+
+        @media #{$md-layout} {
+            padding:  50px 30px;
+        }
+
+        @media #{$md-layout} {
+            padding:  40px 20px;
+        }
+
         &::before {
             position: absolute;
             content: "";
@@ -91,8 +100,17 @@ Styles for concert cards, based on: Blog Styles
                     font-weight: 600;
                     letter-spacing: 0.06em; /* Added by M3 */
                     @extend %transition;
+
+                    @media #{$md-layout} {
+                        font-size: 1em; 
+                    }
+                    @media #{$sm-layout} {
+                        font-size: 1em; 
+                    }
                 }
+                
             }
+
         }
         .concert-grid-btns{
             @extend %transition;
@@ -107,7 +125,7 @@ Styles for concert cards, based on: Blog Styles
             }
             @media #{$large-mobile} {
                 opacity: 1;
-                visibility: visible;
+            visibility: hidden;
             }
         }
     }
@@ -141,6 +159,15 @@ Styles for concert cards, based on: Blog Styles
     }
 }
 
+@media #{$md-layout} {
+    .container-mca-wider .col-md-6{
+        padding-left:  8px;
+        padding-right: 8px;
+        margin-bottom: 0px;
+    }
+}
+
+
 a ,
 button {
     &.btn-concert-card {
@@ -153,8 +180,8 @@ button {
         display: inline-block;
         border: 1px solid $theme-color;
         background-color: $theme-color; /* M3 */
-        font-size: 1.1em;
-        letter-spacing:0.18em;
+        font-size: 14px;
+        letter-spacing:0.15em;
         font-weight: 600;
         border-radius: 0px;
         position: relative;

@@ -1,32 +1,29 @@
 import React, { Component , Fragment } from "react";
 import {Link} from "react-router-dom";
 import { Parallax } from "react-parallax";
-import Scrollspy from 'react-scrollspy';
 import ScrollToTop from 'react-scroll-up';
+import Slider from "react-slick";
 import { FiChevronUp , FiX , FiMenu } from "react-icons/fi";
 import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn} from "react-icons/fa";
 
 
 import MusicasaHeader from "../../Components/McaHeader";
 import Helmet from "../../Components/McaHelmet";
-import FooterTwo from "../../Components/McaFooterTwo";
+
+import FooterMusicasa from "../../Components/FooterMusicasa";
+
+import BlogContent from "../../Components/McaBlogContent";
 
 
 
-import Slider from "react-slick";
 
 
-
-const SlideList = [
-    {
-        textPosition: 'text-center',
-        category: '',
-        title: 'Login',
-         buttonText: 'Perform With Us',
-        buttonLink: '/contact'
-    },
+const SocialShare = [
+    {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
+    {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
+    {Social: <FaInstagram /> , link: 'https://www.instagram.com/'},
+    {Social: <FaTwitter /> , link: 'https://twitter.com/'},
 ]
-
 
 
 
@@ -50,6 +47,7 @@ class Login extends Component{
     }
     stickyHeader () {}
     render(){
+        const PostList = BlogContent.slice(0 , 5);
         
         window.addEventListener('scroll', function() {
             var value = window.scrollY;
@@ -72,36 +70,37 @@ class Login extends Component{
         
         return(
             <Fragment>
-                <Helmet pageTitle="Login" />
-
+                <Helmet pageTitle="Homepage" />
+                <div className="musicasa-container">
+                
                 {/* Start HeaderThree Area  */}
                 <MusicasaHeader />
                 {/* End HeaderThree Area  */}
 
-                {/* Start Page Wrapper  */}
-                <main id="home" className="page-wrapper bg-login" data-black-overlay="1">
+                {/* Start Main Tag with Page Wrapper  */}
+                <main className="page-wrapper">
 
-                    {/* Start Slider Area   */}
-                    <div className="slider-wrapper ">
-                        <div className="slider-activation">
-                            {SlideList.map((value , index) => (
-                                <div className={`slide slide-style-2 d-flex align-items-center justify-content-center bg_image ${value.bgImage}`} key={index}>
-                                    <div className="container">
-                                        <div className="row">
-                                            <div className="col-6">
-                                                <div className="slide-btn"><a className="rn-button-style--2 btn-solid" href="#">Become a Host</a></div>
-                                            </div>
-                                            <div className="col-6">
-                                                <div className="slide-btn"><a className="rn-button-style--2 btn-solid" href="#">Perform with Us</a></div>
-                                            </div>
+                    <div className="slider-activation">
+                    {/* Start Single Slide */}
+                        <div className="slide slide-style-2 slider-paralax d-flex align-items-center justify-content-center bg_image mca-bg-image-parallax-01" data-black-overlay="1">
+                            <div className="container">
+                                <div className="row">
+                                    <div className="col-lg-12">
+                                        <div className="">
+                                            <div className="slide-btn">
+                                                <a className="rn-button-style--2 btn-primary-color" href="">Text</a>
+                                        </div>
                                         </div>
                                     </div>
                                 </div>
-                            ))}
+                            </div>
                         </div>
+                    {/* End Single Slide */}
                     </div>
-                    {/* End Slider Area   */}
 
+
+                </main>
+                {/* End Main Tag with Page Wrapper  */}
 
                 {/* Start Back To Top */}
                 <div className="backto-top">
@@ -110,22 +109,12 @@ class Login extends Component{
                     </ScrollToTop>
                 </div>
                 {/* End Back To Top */}
-
-                <div id="home-footer-variation">
-                {/* Start Footer Style  */}
-                 <FooterTwo />
+                 {/* Start Footer Style  */}
+                 <FooterMusicasa />
                 {/* End Footer Style  */}
-                </div>
-
-
-
-                </main>
-                {/* End Page Wrapper  */}
-
-
-
                 
 
+                </div>
 
             </Fragment>
         )

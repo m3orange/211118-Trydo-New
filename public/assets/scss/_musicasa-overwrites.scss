@@ -1,0 +1,67 @@
+/*--------------------------
+    Color Darker Version  
+----------------------------*/
+
+
+
+
+
+
+.bg-login {
+    background: url(/assets/images-mca/bg/bg-in-musicasalive.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+
+}
+
+.mca-container-radius{
+    border-radius: 10px;
+}
+
+
+.mca-border-radius{
+    border-radius: 20px;
+}
+
+.mca-btn-border-radius{
+    border-radius: 0px!important;
+}
+
+
+
+
+/* Temp declarations of sizes of text in artist profiles --- mobile view ------ */
+
+
+#about .container-xl{
+    max-width: 90%;
+    
+
+}
+
+.container-mca-wider{
+    max-width: 90%;
+
+    
+    @media #{$md-layout} {
+    max-width: 90%;
+    }
+}
+
+
+#bio-area-container .container-lg{
+    max-width: 1200px;
+
+    @media #{$md-layout} {
+        border: 1px solid red;
+        max-width: 90%;
+    }
+
+    @media #{$sm-layout} {
+        border: 1px solid yellow;
+        max-width: 95%;
+    }
+}
+

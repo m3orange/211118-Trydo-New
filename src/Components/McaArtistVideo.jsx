@@ -22,8 +22,8 @@ class ArtistVideo extends Component {
                 <main className="section-video">
 
                     {/* Start Video Area  */}
-                    <div className="rn-section ptb--180">
-                        <div className="container">
+                    <div className="rn-section ptb--80">
+                        <div className="container-lg container-mca-wider">
                              <div className="row sercice-details-content align-items-center">
                                 <div className="col-lg-12">
                                     <div className="thumb position-relative">
